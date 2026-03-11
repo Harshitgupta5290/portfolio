@@ -1,10 +1,13 @@
 const path = require('path')
- 
+
 module.exports = {
+  output: 'export',
+  basePath: '/my-portfolio',
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/css')],
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
