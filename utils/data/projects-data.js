@@ -1,0 +1,47 @@
+export const projectsData = [
+    {
+        id: 1,
+        name: 'Viblog – AI Assisted Blogging Platform',
+        description: "Engineered a scalable full-stack blogging platform enabling dynamic content publishing, management, and discovery. Integrated AI-powered NLP pipelines for automatic content tagging, keyword extraction, and topic categorization. Built modular REST APIs with Flask and MySQL supporting secure user authentication, session management, and role-based workflows.",
+        tools: ['Flask', 'MySQL', 'Python', 'NLP', 'Bootstrap', 'JavaScript'],
+        role: 'Senior Product Engineer',
+        code: '',
+        demo: '',
+    },
+    {
+        id: 2,
+        name: 'DJoz – Emotion Based Music & Video Recommendation System',
+        description: 'Built an AI-driven multimedia recommendation engine that suggests music and video content based on real-time facial emotion recognition. Developed computer vision pipelines using OpenCV to detect and classify facial emotions from live camera input. Implemented an interactive Flask-based interface with real-time response.',
+        tools: ['Python', 'OpenCV', 'ML', 'Flask', 'MySQL'],
+        role: 'AI / ML Engineer',
+        code: '',
+        demo: '',
+    },
+    {
+        id: 3,
+        name: 'VibeCheck Twitter – Sentiment Intelligence Platform',
+        description: 'Developed a real-time sentiment intelligence platform to analyze public opinion from live Twitter data streams. Built NLP pipelines using TF-IDF vectorization and trained ML classifiers including Logistic Regression and Naive Bayes. Engineered a Flask analytics dashboard to visualize sentiment trends.',
+        tools: ['Python', 'ML', 'NLP', 'Flask', 'Twitter API'],
+        code: '',
+        role: 'Data Scientist',
+        demo: '',
+    },
+    {
+        id: 4,
+        name: 'ERP System (Freelance Project)',
+        description: "Designed and deployed a modular ERP system supporting user onboarding, account management, and operational workflows. Implemented secure role-based access control with Flask-Login to enforce hierarchical permissions across multiple user roles. Developed scalable backend modules for bulk data operations.",
+        tools: ['Flask', 'MySQL', 'Jinja2', 'Bootstrap'],
+        code: '',
+        demo: '',
+        role: 'Full Stack Developer',
+    },
+    {
+        id: 5,
+        name: 'LightsOut – Movie Discovery Platform',
+        description: "Developed a movie discovery web application using ReactJS with modular reusable components. Integrated The MovieDB API to fetch real-time movie metadata, ratings, and posters. Optimized UI performance using modern JavaScript rendering and responsive design techniques.",
+        tools: ['ReactJS', 'API Integration', 'Tailwind CSS', 'JavaScript'],
+        code: '',
+        demo: '',
+        role: 'Frontend Developer',
+    }
+];
