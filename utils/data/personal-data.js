@@ -8,7 +8,7 @@ export const personalData = {
   address: 'New Delhi, India',
   github: 'https://github.com/harshitgupta5290',
   facebook: '#',
-  linkedIn: 'https://www.linkedin.com/in/harshitgupta5290/',
+  linkedIn: 'https://www.linkedin.com/in/harshitgupta1215/',
   instagram: 'https://www.instagram.com/i_.harshitgupta?igsh=aDh2ZTVrczVrbjNk',
   twitter: '#',
   stackOverflow: '#',
