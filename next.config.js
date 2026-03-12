@@ -2,12 +2,16 @@ const path = require('path')
 
 module.exports = {
   output: 'export',
-  basePath: '',
+  basePath: '/my-portfolio',
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/css')],
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/my-portfolio',
+  },
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './image-loader.js',
     remotePatterns: [
       {
         protocol: 'https',
