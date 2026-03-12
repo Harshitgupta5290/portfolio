@@ -82,6 +82,9 @@ import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import flask from '../app/assets/svg/skills/flask.svg'
+import nodejs from '../app/assets/svg/skills/nodejs.svg'
+import redis from '../app/assets/svg/skills/redis.svg'
 
 
 
@@ -254,6 +257,12 @@ export const skillsImage = (skill) => {
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'flask':
+      return flask;
+    case 'node js':
+      return nodejs;
+    case 'redis':
+      return redis;
     default:
       break;
   }
