@@ -13,15 +13,16 @@ function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
 
+  const isHome = pathname === "/";
   const navLinks = [
-    { label: "ABOUT", href: "#about", section: "about" },
-    { label: "EXPERIENCE", href: "#experience", section: "experience" },
-    { label: "SKILLS", href: "#skills", section: "skills" },
-    { label: "EDUCATION", href: "#education", section: "education" },
-    { label: "PROJECTS", href: "#projects", section: "projects" },
-    { label: "CERTIFICATIONS", href: "#certifications", section: "certifications" },
+    { label: "ABOUT", href: isHome ? "#about" : "/#about", section: "about" },
+    { label: "EXPERIENCE", href: isHome ? "#experience" : "/#experience", section: "experience" },
+    { label: "SKILLS", href: isHome ? "#skills" : "/#skills", section: "skills" },
+    { label: "EDUCATION", href: isHome ? "#education" : "/#education", section: "education" },
+    { label: "PROJECTS", href: isHome ? "#projects" : "/#projects", section: "projects" },
+    { label: "CERTIFICATIONS", href: isHome ? "#certifications" : "/#certifications", section: "certifications" },
     { label: "BLOGS", href: "/blog", section: "blog" },
-    { label: "CONTACT", href: "#contact", section: "contact" },
+    { label: "CONTACT", href: isHome ? "#contact" : "/#contact", section: "contact" },
   ];
 
   useEffect(() => {

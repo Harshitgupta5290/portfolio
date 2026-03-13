@@ -12,8 +12,23 @@ export function generateMetadata({ params }) {
   const blog = blogsData.find((b) => b.slug === params.slug);
   if (!blog) return {};
   return {
-    title: `${blog.title} | Harshit Gupta`,
+    title: blog.title,
     description: blog.description,
+    authors: [{ name: "Harshit Gupta" }],
+    keywords: blog.tags,
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      type: "article",
+      publishedTime: blog.published_at,
+      authors: ["Harshit Gupta"],
+      tags: blog.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.description,
+    },
   };
 }
 

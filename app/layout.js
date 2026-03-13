@@ -20,10 +20,48 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
 });
 
+const siteUrl = "https://harshitgupta5290.github.io/portfolio";
+
 export const metadata = {
-  title: "Portfolio of Harshit Gupta - Full Stack Developer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Harshit Gupta | Full Stack Developer & AI Engineer",
+    template: "%s | Harshit Gupta",
+  },
   description:
-    "This is the portfolio of Harshit Gupta. I am a Full Stack Developer specialized in backend architecture, AI-driven product development, and scaling production-grade SaaS platforms.",
+    "Portfolio of Harshit Gupta — Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, RAG, and cloud-native SaaS platforms. Based in New Delhi, India.",
+  keywords: [
+    "Harshit Gupta", "Full Stack Developer", "AI Engineer", "Python", "Flask",
+    "Microservices", "LLMs", "RAG", "Docker", "AWS", "Backend Developer",
+    "Software Developer", "New Delhi", "portfolio",
+  ],
+  authors: [{ name: "Harshit Gupta", url: siteUrl }],
+  creator: "Harshit Gupta",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: "Harshit Gupta | Full Stack Developer & AI Engineer",
+    description:
+      "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS. Based in New Delhi, India.",
+    siteName: "Harshit Gupta Portfolio",
+    images: [{ url: "/profile.png", width: 1200, height: 630, alt: "Harshit Gupta" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Harshit Gupta | Full Stack Developer & AI Engineer",
+    description:
+      "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS.",
+    images: ["/profile.png"],
+    creator: "@harshitgupta",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +72,25 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Harshit Gupta",
+            url: siteUrl,
+            email: "harshitgupta5290@gmail.com",
+            jobTitle: "Full Stack Developer",
+            description: "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS platforms.",
+            address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressCountry: "IN" },
+            sameAs: [
+              "https://github.com/harshitgupta5290",
+              "https://www.linkedin.com/in/harshitgupta1215/",
+            ],
+          }),
+        }}
+      />
       <body className={`${inter.className} ${spaceGrotesk.variable} cursor-none`}>
         <PreloaderWrapper />
         <CustomCursor />
