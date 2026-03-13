@@ -5,8 +5,10 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/css')],
   },
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio',
   env: {
-    NEXT_PUBLIC_BASE_PATH: '',
+    NEXT_PUBLIC_BASE_PATH: '/portfolio',
   },
   images: {
     loader: 'custom',
