@@ -90,7 +90,7 @@ Create a `.env` file in the root directory:
 NEXT_PUBLIC_GTM=GTM-XXXXXXX
 
 # Your deployed app URL
-NEXT_PUBLIC_APP_URL=https://harshitgupta5290.github.io/my-portfolio
+NEXT_PUBLIC_APP_URL=https://harshitgupta5290.github.io/portfolio/
 
 # Gmail (for contact form)
 GMAIL_PASSKEY=your_gmail_app_password
