@@ -9,8 +9,8 @@ const SECTIONS = [
   { label: "ABOUT",          section: "about" },
   { label: "EXPERIENCE",     section: "experience" },
   { label: "SKILLS",         section: "skills" },
-  { label: "EDUCATION",      section: "education" },
   { label: "PROJECTS",       section: "projects" },
+  { label: "EDUCATION",      section: "education" },
   { label: "CERTIFICATIONS", section: "certifications" },
   { label: "BLOGS",          section: "blogs", isRoute: true, href: "/blog" },
   { label: "CONTACT",        section: "contact" },
@@ -63,8 +63,9 @@ function Navbar() {
     }
   };
 
-  const isSectionActive = (section) => activeSection === section;
-  const isBlogActive    = () => pathname?.startsWith("/blog");
+  // Active when on that route (for route items) OR when scrolled to that section
+  const isItemActive = (section, href) =>
+    href ? pathname?.startsWith(href) || activeSection === section : activeSection === section;
 
   return (
     <nav className="relative bg-transparent">
@@ -84,7 +85,7 @@ function Navbar() {
         <ul className="hidden lg:flex lg:items-center lg:gap-0.5">
           {SECTIONS.map(({ label, section, isRoute, href }) => {
             if (isRoute) {
-              const active = isBlogActive();
+              const active = isItemActive(section, href);
               return (
                 <li key={section}>
                   <Link
@@ -99,7 +100,7 @@ function Navbar() {
                 </li>
               );
             }
-            const active = isSectionActive(section);
+            const active = isItemActive(section);
             return (
               <li key={section}>
                 <a
@@ -140,7 +141,7 @@ function Navbar() {
           <ul className="flex flex-col py-2">
             {SECTIONS.map(({ label, section, isRoute, href }) => {
               if (isRoute) {
-                const active = isBlogActive();
+                const active = isItemActive(section, href);
                 return (
                   <li key={section} className="w-full">
                     <Link
@@ -156,7 +157,7 @@ function Navbar() {
                   </li>
                 );
               }
-              const active = isSectionActive(section);
+              const active = isItemActive(section);
               return (
                 <li key={section} className="w-full">
                   <a
