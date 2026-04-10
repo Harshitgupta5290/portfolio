@@ -12,6 +12,7 @@ const SECTIONS = [
   { label: "EDUCATION",      section: "education" },
   { label: "PROJECTS",       section: "projects" },
   { label: "CERTIFICATIONS", section: "certifications" },
+  { label: "BLOGS",          section: "blogs", isRoute: true, href: "/blog" },
   { label: "CONTACT",        section: "contact" },
 ];
 
@@ -81,7 +82,23 @@ function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden lg:flex lg:items-center lg:gap-0.5">
-          {SECTIONS.map(({ label, section }) => {
+          {SECTIONS.map(({ label, section, isRoute, href }) => {
+            if (isRoute) {
+              const active = isBlogActive();
+              return (
+                <li key={section}>
+                  <Link
+                    href={href}
+                    className="relative block px-3 py-2 no-underline outline-none hover:no-underline group"
+                  >
+                    <div className={`text-[11px] font-semibold tracking-widest uppercase transition-colors duration-300 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>
+                      {label}
+                    </div>
+                    <span className={`absolute bottom-0 left-3 right-3 h-[1px] origin-left transition-all duration-300 ${active ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3] scale-x-100" : "bg-pink-500 scale-x-0 group-hover:scale-x-100"}`} />
+                  </Link>
+                </li>
+              );
+            }
             const active = isSectionActive(section);
             return (
               <li key={section}>
@@ -98,17 +115,6 @@ function Navbar() {
               </li>
             );
           })}
-          <li>
-            <Link
-              href="/blog"
-              className="relative block px-3 py-2 no-underline outline-none hover:no-underline group"
-            >
-              <div className={`text-[11px] font-semibold tracking-widest uppercase transition-colors duration-300 ${isBlogActive() ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>
-                BLOGS
-              </div>
-              <span className={`absolute bottom-0 left-3 right-3 h-[1px] origin-left transition-all duration-300 ${isBlogActive() ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3] scale-x-100" : "bg-pink-500 scale-x-0 group-hover:scale-x-100"}`} />
-            </Link>
-          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -132,7 +138,24 @@ function Navbar() {
       {isMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 z-50 border-t border-[#1b2c6850] bg-[#0d1224]/95 backdrop-blur-md">
           <ul className="flex flex-col py-2">
-            {SECTIONS.map(({ label, section }) => {
+            {SECTIONS.map(({ label, section, isRoute, href }) => {
+              if (isRoute) {
+                const active = isBlogActive();
+                return (
+                  <li key={section} className="w-full">
+                    <Link
+                      href={href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex items-center gap-3 px-6 py-3 no-underline outline-none group"
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${active ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3]" : "bg-gray-700 group-hover:bg-pink-500"}`} />
+                      <div className={`text-xs font-semibold tracking-widest uppercase transition-colors duration-200 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>
+                        {label}
+                      </div>
+                    </Link>
+                  </li>
+                );
+              }
               const active = isSectionActive(section);
               return (
                 <li key={section} className="w-full">
@@ -149,18 +172,6 @@ function Navbar() {
                 </li>
               );
             })}
-            <li className="w-full">
-              <Link
-                href="/blog"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center gap-3 px-6 py-3 no-underline outline-none group"
-              >
-                <span className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${isBlogActive() ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3]" : "bg-gray-700 group-hover:bg-pink-500"}`} />
-                <div className={`text-xs font-semibold tracking-widest uppercase transition-colors duration-200 ${isBlogActive() ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>
-                  BLOGS
-                </div>
-              </Link>
-            </li>
           </ul>
         </div>
       )}
