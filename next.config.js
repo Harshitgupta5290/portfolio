@@ -8,6 +8,8 @@ module.exports = {
   },
   basePath: '/portfolio',
   assetPrefix: '/portfolio',
+  compress: true,
+  productionBrowserSourceMaps: false,
   sassOptions: {
     includePaths: [path.join(__dirname, 'app/css')],
   },
@@ -17,6 +19,7 @@ module.exports = {
   images: {
     loader: 'custom',
     loaderFile: './image-loader.js',
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',

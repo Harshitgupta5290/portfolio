@@ -2413,3 +2413,7 @@ if __name__ == "__main__":
     `,
   },
 ];
+
+// Lightweight metadata-only list for the homepage (no content field = no 2400-line download)
+// eslint-disable-next-line no-unused-vars
+export const featuredBlogs = blogsData.slice(0, 3).map(({ content: _content, ...meta }) => meta);

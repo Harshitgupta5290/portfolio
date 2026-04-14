@@ -1,5 +1,5 @@
 // @flow strict
-import { blogsData } from '@/utils/data/blogs-data';
+import { featuredBlogs } from '@/utils/data/blogs-data';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
@@ -23,8 +23,8 @@ function Blog() {
         <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-8">
-        {blogsData.slice(0, 3).map((blog, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8">
+        {featuredBlogs.map((blog, i) => (
           <BlogCard blog={blog} index={i} key={blog.id} />
         ))}
       </div>

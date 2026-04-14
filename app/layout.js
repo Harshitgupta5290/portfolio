@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
-  preload: false,
+  preload: true,
 });
 
 const siteUrl = "https://harshitgupta5290.github.io/portfolio";

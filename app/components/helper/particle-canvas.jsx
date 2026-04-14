@@ -18,8 +18,8 @@ export default function ParticleCanvas() {
     const mouse = { x: null, y: null };
 
     const isMobile = () => window.innerWidth < 768;
-    const PARTICLE_COUNT = () => (isMobile() ? 30 : 70);
-    const CONNECTION_DIST = () => (isMobile() ? 80 : 130);
+    const PARTICLE_COUNT = () => (isMobile() ? 15 : 40);
+    const CONNECTION_DIST = () => (isMobile() ? 60 : 100);
 
     let particles = [];
     let W = 0, H = 0;
@@ -114,7 +114,14 @@ export default function ParticleCanvas() {
       rafRef.current = requestAnimationFrame(animate);
     }
 
-    const onMouseMove = (e) => { mouse.x = e.clientX; mouse.y = e.clientY; };
+    let lastMouse = 0;
+    const onMouseMove = (e) => {
+      const now = Date.now();
+      if (now - lastMouse < 32) return; // ~30fps cap for mouse tracking
+      lastMouse = now;
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    };
     const onMouseLeave = () => { mouse.x = null; mouse.y = null; };
 
     window.addEventListener("resize", resize, { passive: true });

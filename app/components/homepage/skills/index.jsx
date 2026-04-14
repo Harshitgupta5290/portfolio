@@ -58,7 +58,7 @@ function Skills() {
 
       {/* Section header */}
       <div className="flex flex-col items-center mt-12 mb-10">
-        <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-extrabold text-center leading-tight tracking-tight bg-gradient-to-r from-violet-400 to-[#16f2b3] bg-clip-text text-transparent">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl md:text-5xl font-extrabold text-center leading-tight tracking-tight bg-gradient-to-r from-violet-400 to-[#16f2b3] bg-clip-text text-transparent">
           Skills &amp; Technologies
         </h2>
         <div className="w-12 h-[3px] bg-gradient-to-r from-violet-400 to-[#16f2b3] mt-5 rounded-full" />
@@ -85,8 +85,8 @@ function Skills() {
 
       {/* Marquee rows with edge fades */}
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#0d1224] to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#0d1224] to-transparent pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10 bg-gradient-to-r from-[#0d1224] to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10 bg-gradient-to-l from-[#0d1224] to-transparent pointer-events-none" />
 
         <div className="flex flex-col gap-5 py-2">
           <Marquee gradient={false} speed={38} pauseOnHover direction="left">

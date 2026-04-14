@@ -4,7 +4,7 @@
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
@@ -61,7 +61,7 @@ function HeroSection() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = useCallback((e) => {
     const card = cardRef.current;
     if (!card) return;
     const rect = card.getBoundingClientRect();
@@ -77,7 +77,6 @@ function HeroSection() {
     });
     setGlowPos({ x: (x / rect.width) * 100, y: (y / rect.height) * 100, visible: true });
 
-    // Detect corner proximity (within 40px)
     const THRESHOLD = 40;
     const w = rect.width;
     const h = rect.height;
@@ -86,9 +85,9 @@ function HeroSection() {
     else if (x < THRESHOLD && y > h - THRESHOLD) setActiveCorner("bl");
     else if (x > w - THRESHOLD && y > h - THRESHOLD) setActiveCorner("br");
     else setActiveCorner(null);
-  };
+  }, []);
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     setTiltStyle({
       transform: "perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)",
       transition: "transform 0.6s cubic-bezier(0.23,1,0.32,1)",
@@ -96,9 +95,9 @@ function HeroSection() {
     setGlowPos((p) => ({ ...p, visible: false }));
     setIsHovering(false);
     setActiveCorner(null);
-  };
+  }, []);
 
-  const handleMouseEnter = () => setIsHovering(true);
+  const handleMouseEnter = useCallback(() => setIsHovering(true), []);
 
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
@@ -113,7 +112,7 @@ function HeroSection() {
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 w-full">
         {/* Left: Text content */}
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
+        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-10 md:pb-6 lg:pb-0 lg:pt-10">
           {/* Greeting pill */}
           <div className="mb-4 flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#16f2b320] bg-[#16f2b308]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />
@@ -267,7 +266,7 @@ function HeroSection() {
 
             {/* Code area */}
             <div className="overflow-x-auto border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-              <code className="font-mono text-xs md:text-sm lg:text-base">
+              <code className="font-mono text-[10px] sm:text-xs md:text-sm lg:text-base">
                 <div className="blink">
                   <span className="mr-2 text-pink-500">const</span>
                   <span className="mr-2 text-white">coder</span>
@@ -373,4 +372,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default memo(HeroSection);

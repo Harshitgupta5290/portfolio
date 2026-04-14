@@ -25,20 +25,27 @@ function Navbar() {
   const isHome   = pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop  = window.scrollY;
-      const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-      setScrolled(scrollTop > 30);
-      setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
+    let ticking = false;
 
-      // Active section detection — only meaningful on home page
-      if (!document.getElementById("about")) return;
-      let current = "";
-      for (const { section } of SECTIONS) {
-        const el = document.getElementById(section);
-        if (el && el.getBoundingClientRect().top <= 120) current = section;
-      }
-      setActiveSection(current);
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        setScrolled(scrollTop > 30);
+        setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
+
+        // Active section detection — query fresh each time so dynamic
+        // sections (loaded with next/dynamic) are found once they mount
+        let current = "";
+        for (const { section } of SECTIONS) {
+          const el = document.getElementById(section);
+          if (el && el.getBoundingClientRect().top <= 100) current = section;
+        }
+        setActiveSection(current);
+        ticking = false;
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -119,14 +126,14 @@ function Navbar() {
         </ul>
 
         {/* Resume button — desktop */}
-        <a
+        <Link
           href="/Harshit_Gupta_Resume.pdf"
+          download="Harshit_Gupta_Resume.pdf"
           target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:flex items-center gap-1.5 ml-3 px-4 py-1.5 rounded-md border border-[#16f2b3]/40 text-[#16f2b3] text-[11px] font-semibold tracking-widest uppercase hover:bg-[#16f2b3]/10 hover:border-[#16f2b3] transition-all duration-300"
+          className="hidden md:flex items-center gap-1.5 ml-3 px-4 py-1.5 rounded-md border border-[#16f2b3]/40 text-[#16f2b3] text-[11px] font-semibold tracking-widest uppercase hover:bg-[#16f2b3]/10 hover:border-[#16f2b3] transition-all duration-300"
         >
           Resume
-        </a>
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -183,6 +190,21 @@ function Navbar() {
                 </li>
               );
             })}
+            {/* Resume download — mobile only */}
+            <li className="w-full px-6 py-3 md:hidden">
+              <Link
+                href="/Harshit_Gupta_Resume.pdf"
+                download="Harshit_Gupta_Resume.pdf"
+                target="_blank"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center gap-3 w-full"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] shadow-[0_0_6px_#16f2b3]" />
+                <div className="text-xs font-semibold tracking-widest uppercase text-[#16f2b3]">
+                  Resume
+                </div>
+              </Link>
+            </li>
           </ul>
         </div>
       )}

@@ -57,7 +57,7 @@ function Education() {
                           {education.duration}
                         </p>
                       </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
+                      <div className="flex items-center gap-x-4 sm:gap-x-6 lg:gap-x-8 px-2 sm:px-3 py-4 sm:py-5">
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>

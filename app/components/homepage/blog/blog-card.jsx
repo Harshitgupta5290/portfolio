@@ -19,7 +19,7 @@ function BlogCard({ blog, index = 0 }) {
   return (
     <Link href={`/blog/${blog.slug}`}>
       <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group cursor-pointer h-full flex flex-col">
-        <div className={`h-44 lg:h-48 w-auto overflow-hidden rounded-t-lg bg-gradient-to-br ${gradients[index % gradients.length]} flex items-center justify-center relative`}>
+        <div className={`h-32 sm:h-40 lg:h-44 w-auto overflow-hidden rounded-t-lg bg-gradient-to-br ${gradients[index % gradients.length]} flex items-center justify-center relative`}>
           <p className="text-white/10 text-7xl font-black uppercase leading-none select-none px-4 text-center">
             {blog.tags?.[0] ?? 'BLOG'}
           </p>

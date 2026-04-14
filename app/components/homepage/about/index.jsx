@@ -80,7 +80,7 @@ function AboutSection() {
           </p>
 
           {/* 3D flip stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mt-6 sm:mt-8">
             {aboutStats.map((stat, i) => {
               const num = parseInt(stat.value);
               const hasSuffix = stat.value.includes("+");
@@ -115,7 +115,7 @@ function AboutSection() {
             {/* Outer glow — outside the image bounds, no overflow-hidden here */}
             <div className="absolute -inset-3 rounded-xl bg-gradient-to-br from-violet-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md pointer-events-none" />
             {/* Image + border glow — clipped to the image shape */}
-            <div className="relative rounded-xl overflow-hidden w-[280px] h-[350px]">
+            <div className="relative rounded-xl overflow-hidden w-[200px] h-[250px] sm:w-[240px] sm:h-[300px] md:w-[280px] md:h-[350px]">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-violet-500/30 to-[#16f2b3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
               <Image
                 src={personalData.profile}

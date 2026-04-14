@@ -197,7 +197,7 @@ const Projects = () => {
 
       <div className="pt-24">
         {/* ── Stats row ── */}
-        <div className="flex flex-wrap items-center gap-6 mb-10">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10">
           {[
             { value: `${totalProjects}+`, label: "Projects Built" },
             { value: `${totalCategories}`,  label: "Domains" },
