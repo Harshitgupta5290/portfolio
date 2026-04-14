@@ -103,7 +103,7 @@ export const projectsData = [
     role: "Full Stack Developer",
     category: "Full Stack",
     featured: true,
-    code: "https://github.com/Harshitgupta5290/TRAVELIX",
+    code: "https://github.com/Harshitgupta5290/_TRAVELIX_",
     demo: "",
   },
   {
@@ -147,7 +147,7 @@ export const projectsData = [
   },
   {
     id: 9,
-    name: "exploria",
+    name: "Explorix",
     tagline: "Responsive Travel & Tour Landing Page",
     description:
       "Responsive travel & tour landing page — hero section, booking form, special offers, team section, contact form. Built with semantic HTML5, CSS3 flexbox/grid, and vanilla JavaScript. Pixel-perfect responsive across all device sizes with smooth scroll and animation.",
@@ -155,7 +155,7 @@ export const projectsData = [
     role: "Frontend Developer",
     category: "Frontend",
     featured: false,
-    code: "https://github.com/Harshitgupta5290/exploria",
+    code: "https://github.com/Harshitgupta5290/explorix",
     demo: "",
   },
   {
@@ -199,7 +199,7 @@ export const projectsData = [
   },
   {
     id: 13,
-    name: "Survival!",
+    name: "Survival",
     tagline: "2D Scrolling Shooter Game",
     description:
       "A 2D scrolling shooter game built with Python & Pygame. Fight through tile-based scrolling levels, shoot enemies, dodge projectiles, collect coins, and manage the hero until silence. Features animated sprites, parallax backgrounds, collision detection, enemy AI, and a score system.",
@@ -207,12 +207,12 @@ export const projectsData = [
     role: "Game Developer",
     category: "Creative",
     featured: false,
-    code: "https://github.com/Harshitgupta5290/Survival-",
+    code: "https://github.com/Harshitgupta5290/Survival",
     demo: "",
   },
   {
     id: 14,
-    name: "fullstack-flasklogin3",
+    name: "Flask Login System",
     tagline: "Full-Stack Auth System with Role Management",
     description:
       "A full-stack user authentication system built with Flask and MySQL. Features secure login/signup, session management, hashed passwords via Werkzeug, and role-based access control. Supports protected routes, email verification workflow, and admin dashboard.",
@@ -220,7 +220,7 @@ export const projectsData = [
     role: "Backend Engineer",
     category: "Full Stack",
     featured: false,
-    code: "https://github.com/Harshitgupta5290/fullstack-flasklogin3",
+    code: "https://github.com/Harshitgupta5290/fullstack-flaskloginUI",
     demo: "",
   },
   {
