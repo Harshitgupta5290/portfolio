@@ -1,12 +1,16 @@
 const path = require('path')
 
 module.exports = {
-  output: 'export',
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'app/css')],
+  ...(process.env.NODE_ENV === 'production' ? { output: 'export' } : {}),
+  async redirects() {
+    if (process.env.NODE_ENV === 'production') return [];
+    return [{ source: '/', destination: '/portfolio', permanent: false, basePath: false }];
   },
   basePath: '/portfolio',
   assetPrefix: '/portfolio',
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'app/css')],
+  },
   env: {
     NEXT_PUBLIC_BASE_PATH: '/portfolio',
   },

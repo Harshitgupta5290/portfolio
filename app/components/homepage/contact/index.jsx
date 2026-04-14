@@ -19,7 +19,7 @@ function ContactSection() {
 
       {/* Section header */}
       <div className="flex flex-col items-center mt-12 mb-14">
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center leading-tight tracking-tight">
+        <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-extrabold text-white text-center leading-tight tracking-tight">
           Let&apos;s Connect
         </h2>
         <p className="text-gray-500 text-sm mt-3 max-w-md text-center leading-relaxed">

@@ -23,8 +23,10 @@ function Education() {
       </div>
 
       <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
-        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-          Education
+        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold tracking-tight">
+          <span className="text-[#16f2b3] font-mono select-none">{'{ '}</span>
+          <span className="text-white">Education</span>
+          <span className="text-[#16f2b3] font-mono select-none">{' }'}</span>
         </h2>
         <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
       </div>

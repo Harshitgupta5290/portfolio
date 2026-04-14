@@ -9,7 +9,7 @@ const SECTIONS = [
   { label: "ABOUT",          section: "about" },
   { label: "EXPERIENCE",     section: "experience" },
   { label: "SKILLS",         section: "skills" },
-  { label: "PROJECTS",       section: "projects" },
+  { label: "PROJECTS",       section: "projects", isRoute: true, href: "/projects" },
   { label: "EDUCATION",      section: "education" },
   { label: "CERTIFICATIONS", section: "certifications" },
   { label: "BLOGS",          section: "blogs", isRoute: true, href: "/blog" },

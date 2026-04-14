@@ -58,10 +58,10 @@ function Skills() {
 
       {/* Section header */}
       <div className="flex flex-col items-center mt-12 mb-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center leading-tight tracking-tight">
+        <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-extrabold text-center leading-tight tracking-tight bg-gradient-to-r from-violet-400 to-[#16f2b3] bg-clip-text text-transparent">
           Skills &amp; Technologies
         </h2>
-        <div className="w-12 h-[3px] bg-[#16f2b3] mt-5 rounded-full" />
+        <div className="w-12 h-[3px] bg-gradient-to-r from-violet-400 to-[#16f2b3] mt-5 rounded-full" />
       </div>
 
       {/* Category badges */}

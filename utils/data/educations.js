@@ -9,7 +9,7 @@ export const educations = [
   {
     id: 2,
     title: "High School Certification",
-    duration: "2016 – 2019",
+    duration: "2015 – 2019",
     institution: "The Mann School New Delhi",
   }
 ]

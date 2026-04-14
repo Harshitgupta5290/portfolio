@@ -152,7 +152,7 @@ function Certifications() {
         <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[#16f2b3] mb-3">
           ✦ Verified Credentials ✦
         </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
           <span className="text-white">My </span>
           <span className="bg-gradient-to-r from-violet-400 via-[#16f2b3] to-pink-400 bg-clip-text text-transparent">
             Certifications

@@ -23,8 +23,7 @@ async function sendTelegramMessage(token, chat_id, message) {
       chat_id,
     });
     return res.data.ok;
-  } catch (error) {
-    console.error('Error sending Telegram message:', error.response?.data || error.message);
+  } catch {
     return false;
   }
 };
@@ -61,8 +60,7 @@ async function sendEmail(payload, message) {
   try {
     await transporter.sendMail(mailOptions);
     return true;
-  } catch (error) {
-    console.error('Error while sending email:', error.message);
+  } catch {
     return false;
   }
 };
@@ -101,8 +99,7 @@ export async function POST(request) {
       success: false,
       message: 'Failed to send message or email.',
     }, { status: 500 });
-  } catch (error) {
-    console.error('API Error:', error.message);
+  } catch {
     return NextResponse.json({
       success: false,
       message: 'Server error occurred.',

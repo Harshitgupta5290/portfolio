@@ -18,6 +18,7 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  preload: false,
 });
 
 const siteUrl = "https://harshitgupta5290.github.io/portfolio";
@@ -66,7 +67,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="cursor-none">
+    <html lang="en" className="cursor-none" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
@@ -91,7 +92,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${inter.className} ${spaceGrotesk.variable} cursor-none`}>
+      <body className={`${inter.className} ${spaceGrotesk.variable} cursor-none`} suppressHydrationWarning>
         <PreloaderWrapper />
         <CustomCursor />
         <ParticleCanvas />
