@@ -26,32 +26,33 @@ const siteUrl = "https://harshitgupta5290.github.io/portfolio";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Harshit Gupta | Full Stack Developer & AI Engineer",
+    default: "Harshit Gupta | Software Engineer — Full Stack & AI",
     template: "%s | Harshit Gupta",
   },
   description:
-    "Portfolio of Harshit Gupta — Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, RAG, and cloud-native SaaS platforms. Based in New Delhi, India.",
+    "Portfolio of Harshit Gupta — Software Engineer — Full Stack & AI specializing in Python, Flask, Microservices, LLMs, RAG, and cloud-native SaaS platforms. Based in New Delhi, India.",
   keywords: [
-    "Harshit Gupta", "Full Stack Developer", "AI Engineer", "Python", "Flask",
-    "Microservices", "LLMs", "RAG", "Docker", "AWS", "Backend Developer",
-    "Software Developer", "New Delhi", "portfolio",
+    "Harshit Gupta", "Full Stack Developer", "AI Engineer", "Backend Engineer",
+    "Python", "Flask", "Microservices", "LLMs", "RAG", "LangChain",
+    "Docker", "AWS", "Redis", "SQLAlchemy", "REST API",
+    "Backend Developer", "Software Developer", "New Delhi", "portfolio",
   ],
   authors: [{ name: "Harshit Gupta", url: siteUrl }],
   creator: "Harshit Gupta",
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Harshit Gupta | Full Stack Developer & AI Engineer",
+    title: "Harshit Gupta | Software Engineer — Full Stack & AI",
     description:
-      "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS. Based in New Delhi, India.",
+      "Software Engineer — Full Stack & AI specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS. Based in New Delhi, India.",
     siteName: "Harshit Gupta Portfolio",
     images: [{ url: "/profile.png", width: 1200, height: 630, alt: "Harshit Gupta" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Harshit Gupta | Full Stack Developer & AI Engineer",
+    title: "Harshit Gupta | Software Engineer — Full Stack & AI",
     description:
-      "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS.",
+      "Software Engineer — Full Stack & AI specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS.",
     images: ["/profile.png"],
     creator: "@harshitgupta",
   },
@@ -81,8 +82,8 @@ export default function RootLayout({ children }) {
               name: "Harshit Gupta",
               url: siteUrl,
               email: "harshitgupta5290@gmail.com",
-              jobTitle: "Full Stack Developer",
-              description: "Full Stack Developer & AI Engineer specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS platforms.",
+              jobTitle: "Software Engineer — Full Stack & AI",
+              description: "Software Engineer — Full Stack & AI specializing in Python, Flask, Microservices, LLMs, and cloud-native SaaS platforms.",
               address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressCountry: "IN" },
               sameAs: [
                 "https://github.com/harshitgupta5290",

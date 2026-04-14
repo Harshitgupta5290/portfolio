@@ -13,10 +13,10 @@ const skillGroups = [
 ];
 
 const categories = [
-  { label: "Backend", count: 9, color: "#16f2b3" },
+  { label: "Backend", count: 8, color: "#16f2b3" },
   { label: "Frontend", count: 6, color: "#a78bfa" },
-  { label: "AI / ML", count: 6, color: "#ec4899" },
-  { label: "DevOps", count: 6, color: "#f59e0b" },
+  { label: "AI / ML", count: 8, color: "#ec4899" },
+  { label: "DevOps", count: 5, color: "#f59e0b" },
 ];
 
 function SkillPill({ skill }) {

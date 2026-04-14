@@ -52,46 +52,26 @@ export const certifications = [
     issuer: "HackerRank",
     year: "2024",
     category: "Database",
-    featured: false,
+    featured: true,
     description:
       "Proficiency in intermediate SQL concepts including subqueries, aggregation, and set operations.",
     tags: ["SQL", "Database"],
   },
-  {
-    id: 6,
-    title: "SQL (Basic)",
-    issuer: "HackerRank",
-    year: "2023",
-    category: "Database",
-    featured: false,
-    description:
-      "Foundational SQL skills including SELECT queries, filtering, sorting, and basic joins.",
-    tags: ["SQL", "Database"],
-  },
+  // { id: 6, title: "SQL (Basic)", issuer: "HackerRank", year: "2023", category: "Database", featured: false,
+  //   description: "Foundational SQL skills including SELECT queries, filtering, sorting, and basic joins.",
+  //   tags: ["SQL", "Database"] },
+  // ← Redundant — SQL (Advanced) + SQL (Intermediate) already present
 
   // ── Programming ──────────────────────────────────────────────────────────
-  {
-    id: 7,
-    title: "Python (Basic)",
-    issuer: "HackerRank",
-    year: "2023",
-    category: "Programming",
-    featured: true,
-    description:
-      "Validated foundational Python programming skills including data types, control flow, functions, and OOP basics.",
-    tags: ["Python", "Programming"],
-  },
-  {
-    id: 8,
-    title: "C Course",
-    issuer: "Sololearn",
-    year: "2021",
-    category: "Programming",
-    featured: false,
-    description:
-      "Completed C programming course covering pointers, memory management, data structures, and file handling.",
-    tags: ["C", "Programming", "Memory Management"],
-  },
+  // { id: 7, title: "Python (Basic)", issuer: "HackerRank", year: "2023", category: "Programming", featured: true,
+  //   description: "Validated foundational Python programming skills including data types, control flow, functions, and OOP basics.",
+  //   tags: ["Python", "Programming"] },
+  // ← Upgrade to Python (Intermediate) first, then restore
+
+  // { id: 8, title: "C Course", issuer: "Sololearn", year: "2021", category: "Programming", featured: false,
+  //   description: "Completed C programming course covering pointers, memory management, data structures, and file handling.",
+  //   tags: ["C", "Programming", "Memory Management"] },
+  // ← Sololearn student-level, not relevant to AI/backend trajectory
 
   // ── Web Development ──────────────────────────────────────────────────────
   {
@@ -100,7 +80,7 @@ export const certifications = [
     issuer: "Meta",
     year: "2023",
     category: "Web Development",
-    featured: false,
+    featured: true,
     description:
       "Covered HTML, CSS, JavaScript fundamentals, and React basics as part of Meta's Front-End Developer Professional Certificate.",
     tags: ["HTML", "CSS", "JavaScript", "React"],
@@ -127,43 +107,22 @@ export const certifications = [
       "Validated foundational Git skills including version control, branching, merging, and collaboration workflows.",
     tags: ["Git", "Version Control", "DevOps"],
   },
-  {
-    id: 12,
-    title: "HTML Course",
-    issuer: "Sololearn",
-    year: "2021",
-    category: "Web Development",
-    featured: false,
-    description:
-      "Completed comprehensive HTML course covering semantic markup, forms, tables, and web structure best practices.",
-    tags: ["HTML", "Web Development"],
-  },
+  // { id: 12, title: "HTML Course", issuer: "Sololearn", year: "2021", category: "Web Development", featured: false,
+  //   description: "Completed comprehensive HTML course covering semantic markup, forms, tables, and web structure best practices.",
+  //   tags: ["HTML", "Web Development"] },
+  // ← Sololearn student-level, not relevant at senior level
 
   // ── Problem Solving ──────────────────────────────────────────────────────
-  {
-    id: 13,
-    title: "Problem Solving (Basic)",
-    issuer: "HackerRank",
-    year: "2023",
-    category: "Problem Solving",
-    featured: false,
-    description:
-      "Validated foundational knowledge of algorithms, data structures, and logical problem solving.",
-    tags: ["Algorithms", "Data Structures", "Problem Solving"],
-  },
+  // { id: 13, title: "Problem Solving (Basic)", issuer: "HackerRank", year: "2023", category: "Problem Solving", featured: false,
+  //   description: "Validated foundational knowledge of algorithms, data structures, and logical problem solving.",
+  //   tags: ["Algorithms", "Data Structures", "Problem Solving"] },
+  // ← Upgrade to Problem Solving (Intermediate) first, then restore
 
   // ── Blockchain ───────────────────────────────────────────────────────────
-  {
-    id: 14,
-    title: "Blockchain Basics",
-    issuer: "Great Learning Academy",
-    year: "2023",
-    category: "Blockchain",
-    featured: false,
-    description:
-      "Covered blockchain architecture, distributed ledgers, cryptographic hashing, and real-world blockchain use cases.",
-    tags: ["Blockchain", "Distributed Ledger", "Cryptography"],
-  },
+  // { id: 14, title: "Blockchain Basics", issuer: "Great Learning Academy", year: "2023", category: "Blockchain", featured: false,
+  //   description: "Covered blockchain architecture, distributed ledgers, cryptographic hashing, and real-world blockchain use cases.",
+  //   tags: ["Blockchain", "Distributed Ledger", "Cryptography"] },
+  // ← Reads unfocused next to AI trajectory — restore only if pivoting to Web3
 ];
 
 export const certCategories = [

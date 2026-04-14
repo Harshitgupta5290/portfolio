@@ -6,10 +6,10 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const aboutStats = [
-  { value: "6", label: "Certifications", back: "Oracle & Cloud" },
+  { value: "8", label: "Certifications", back: "Oracle & Cloud" },
   { value: "15+", label: "Tech Stack", back: "Python · AWS · LLMs" },
   { value: "10+", label: "GitHub Repos", back: "Open Source" },
-  { value: "4+", label: "LLM Products", back: "GPT · Claude · RAG" },
+  { value: "3+", label: "AI Projects", back: "NLP · CV · RAG" },
 ];
 
 function CountUp({ target, suffix = "" }) {

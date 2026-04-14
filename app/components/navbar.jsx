@@ -118,6 +118,16 @@ function Navbar() {
           })}
         </ul>
 
+        {/* Resume button — desktop */}
+        <a
+          href="/Harshit_Gupta_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:flex items-center gap-1.5 ml-3 px-4 py-1.5 rounded-md border border-[#16f2b3]/40 text-[#16f2b3] text-[11px] font-semibold tracking-widest uppercase hover:bg-[#16f2b3]/10 hover:border-[#16f2b3] transition-all duration-300"
+        >
+          Resume
+        </a>
+
         {/* Mobile hamburger */}
         <button
           className="lg:hidden relative p-2 text-gray-400 hover:text-white transition-colors duration-200 focus:outline-none"

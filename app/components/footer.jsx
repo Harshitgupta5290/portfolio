@@ -2,7 +2,7 @@
 import { personalData } from "@/utils/data/personal-data";
 import Link from 'next/link';
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
+import { HiDocumentDownload } from "react-icons/hi";
 
 function Footer() {
   return (
@@ -34,11 +34,11 @@ function Footer() {
             </Link>
             <Link
               target="_blank"
-              href={personalData.instagram}
+              href={personalData.resume}
               className="text-gray-400 hover:text-[#16f2b3] transition-colors duration-300"
-              aria-label="Instagram"
+              aria-label="Resume"
             >
-              <FaInstagram size={20} />
+              <HiDocumentDownload size={20} />
             </Link>
           </div>
         </div>

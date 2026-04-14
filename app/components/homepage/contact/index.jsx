@@ -152,7 +152,7 @@ function ContactSection() {
           </div>
 
           {/* CTA strip */}
-          {/* <div className="border-t border-[#1b2c6830] px-6 py-4 flex items-center justify-between">
+          <div className="border-t border-[#1b2c6830] px-6 py-4 flex items-center justify-between">
             <span className="text-gray-600 text-[10px] font-mono">ready to collaborate?</span>
             <a
               href={`mailto:${personalData.email}`}
@@ -161,7 +161,7 @@ function ContactSection() {
               <MdAlternateEmail size={14} />
               Send Email
             </a>
-          </div> */}
+          </div>
         </div>
 
       </div>

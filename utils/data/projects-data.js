@@ -108,7 +108,7 @@ export const projectsData = [
   },
   {
     id: 6,
-    name: "rechr",
+    name: "Rechr",
     tagline: "Cold Email Platform with Inbox Tracking",
     description:
       "Self-hosted cold email platform with sequence management, inbox tracking, link tracking, and bill-tracking built with Sequelize ORM. Supports multi-step email campaigns, open-rate analytics, automated follow-ups, and role-based team management — all in a clean, privacy-first architecture.",
@@ -225,7 +225,7 @@ export const projectsData = [
   },
   {
     id: 15,
-    name: "flask-framework-FormUI",
+    name: "FormUI",
     tagline: "Digital Award System with Premium UI",
     description:
       "A Flask-powered digital award system with an intuitive hub UI that seamlessly integrates with configurable and distinctive professional digital milestones. Responsive form-based UI with multi-step validation, real-time feedback, and an elegant Bootstrap design system.",
