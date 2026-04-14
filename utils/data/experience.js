@@ -3,7 +3,7 @@ export const experiences = [
     id: 1,
     title: 'Senior Product Engineer',
     company: "CertifyMe — Tech99 Innovations Pvt Ltd",
-    duration: "(Apr 2024 – Present)",
+    duration: "(Apr 2024 – Apr 2026)",
     points: [
       "Led the architecture and development of CertifyMe's core SaaS platform for digital credential issuance and verification, supporting enterprise users at scale.",
       "Designed and implemented 20+ production microservices powering credential lifecycle management, third-party integrations, and secure data workflows.",
