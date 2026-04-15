@@ -86,6 +86,17 @@ export const certifications = [
     tags: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
+    id: 15,
+    title: "Rest API (Intermediate)",
+    issuer: "HackerRank",
+    year: "2026",
+    category: "Web Development",
+    featured: true,
+    description:
+      "Validated intermediate REST API skills including fetching data from APIs, working with query parameters, pagination, and processing API responses.",
+    tags: ["REST API", "HTTP", "API Design", "Web Services"],
+  },
+  {
     id: 10,
     title: "React (Basic)",
     issuer: "HackerRank",
