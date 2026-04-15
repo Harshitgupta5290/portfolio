@@ -98,8 +98,8 @@ export const projectsData = [
     name: "Travelix",
     tagline: "Full-Stack Travel Booking Platform",
     description:
-      "Built a full-stack travel search and booking platform with rich UI, multi-database support (MySQL + PostgreSQL), and a Brownie-powered search engine. Features comprehensive travel listings, real-time search filtering, user authentication, and booking management workflows.",
-    tools: ["Flask", "MySQL", "PostgreSQL", "Python", "Bootstrap", "jQuery"],
+      "Built a full-stack travel booking platform with PHP & MySQL. Users can browse hotels, search packages, book rooms, process payments, and manage trips through a Bootstrap-powered interface. Includes role-based admin dashboard for managing every aspect of the platform.",
+    tools: ["PHP", "MySQL", "Bootstrap", "JavaScript", "HTML5", "CSS3"],
     role: "Full Stack Developer",
     category: "Full Stack",
     featured: true,
