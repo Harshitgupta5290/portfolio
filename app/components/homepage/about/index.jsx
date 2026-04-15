@@ -2,11 +2,12 @@
 // @flow strict
 
 import { personalData } from "@/utils/data/personal-data";
+import { certifications } from "@/utils/data/certifications";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const aboutStats = [
-  { value: "8", label: "Certifications", back: "Oracle & Cloud" },
+  { value: `${certifications.length}`, label: "Certifications", back: "Oracle & Cloud" },
   { value: "15+", label: "Tech Stack", back: "Python · AWS · LLMs" },
   { value: "10+", label: "GitHub Repos", back: "Open Source" },
   { value: "3+", label: "AI Projects", back: "NLP · CV · RAG" },
