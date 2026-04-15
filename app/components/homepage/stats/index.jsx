@@ -2,12 +2,13 @@
 
 import { FaBrain, FaCertificate, FaClock, FaServer } from 'react-icons/fa';
 import { MdSpeed } from 'react-icons/md';
+import { certifications } from "@/utils/data/certifications";
 
 const stats = [
   { icon: FaClock, value: "3+", label: "Years Experience", color: "text-[#16f2b3]", border: "hover:border-[#16f2b3]" },
   { icon: FaServer, value: "20+", label: "Microservices Built", color: "text-violet-400", border: "hover:border-violet-400" },
   { icon: FaBrain, value: "5+", label: "AI Projects", color: "text-pink-400", border: "hover:border-pink-400" },
-  { icon: FaCertificate, value: "6", label: "Certifications", color: "text-amber-400", border: "hover:border-amber-400" },
+  { icon: FaCertificate, value: `${certifications.length}`, label: "Certifications", color: "text-amber-400", border: "hover:border-amber-400" },
   { icon: MdSpeed, value: "35%", label: "API Latency Reduced", color: "text-cyan-400", border: "hover:border-cyan-400" },
 ];
 
