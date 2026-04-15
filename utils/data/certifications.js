@@ -131,10 +131,21 @@ export const certifications = [
   // ← Sololearn student-level, not relevant at senior level
 
   // ── Problem Solving ──────────────────────────────────────────────────────
+  {
+    id: 16,
+    title: "Problem Solving (Intermediate)",
+    issuer: "HackerRank",
+    year: "2026",
+    category: "Problem Solving",
+    featured: true,
+    description:
+      "Validated intermediate problem solving skills covering Data Structures (HashMaps, Stacks, Queues) and Algorithms including optimal solutions.",
+    tags: ["Algorithms", "Data Structures", "HashMaps", "Problem Solving"],
+  },
   // { id: 13, title: "Problem Solving (Basic)", issuer: "HackerRank", year: "2023", category: "Problem Solving", featured: false,
   //   description: "Validated foundational knowledge of algorithms, data structures, and logical problem solving.",
   //   tags: ["Algorithms", "Data Structures", "Problem Solving"] },
-  // ← Upgrade to Problem Solving (Intermediate) first, then restore
+  // ← Superseded by Problem Solving (Intermediate)
 
   // ── Blockchain ───────────────────────────────────────────────────────────
   // { id: 14, title: "Blockchain Basics", issuer: "Great Learning Academy", year: "2023", category: "Blockchain", featured: false,
