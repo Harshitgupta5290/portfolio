@@ -95,7 +95,7 @@ export const projectsData = [
   },
   {
     id: 5,
-    name: "TRAVELIX",
+    name: "Travelix",
     tagline: "Full-Stack Travel Booking Platform",
     description:
       "Built a full-stack travel search and booking platform with rich UI, multi-database support (MySQL + PostgreSQL), and a Brownie-powered search engine. Features comprehensive travel listings, real-time search filtering, user authentication, and booking management workflows.",
@@ -134,7 +134,7 @@ export const projectsData = [
   },
   {
     id: 8,
-    name: "lifekit-app",
+    name: "LifeKit App",
     tagline: "AI-Powered Life Intelligence Tracker",
     description:
       "All-in-one life tracker with emotion/sentiment intelligence. Log water, mood, habits, steps, focus, and expenses — and discover how they affect each other. Features Privacy-first, Proactive AI insights via Claude API, cross-category correlation analysis, and offline-capable PWA architecture.",
@@ -173,7 +173,7 @@ export const projectsData = [
   },
   {
     id: 11,
-    name: "google-form-nodejs",
+    name: "Google Form Automation",
     tagline: "Automated Credential Distribution System",
     description:
       "Automated credential distribution system that integrates Google Sheets with Zoho/SMTP to send digital attendance certificates at scale. Reads recipient data from Google Sheets, personalizes each email, attaches PDF certificates, and tracks delivery — all automated with Node.js.",
@@ -186,7 +186,7 @@ export const projectsData = [
   },
   {
     id: 12,
-    name: "form-flood",
+    name: "Form Flood",
     tagline: "AI-Powered Mass Form Submission Tool",
     description:
       "Powerful tool for Google Forms with natural language responses — auto-parses questions, generates human-like answers to 5 persona archetypes via Claude AI, supports file upload, URL progress streaming, and bulk submission. Built for research, testing, and load simulation.",
@@ -225,7 +225,7 @@ export const projectsData = [
   },
   {
     id: 15,
-    name: "FormUI",
+    name: "Form UI",
     tagline: "Digital Award System with Premium UI",
     description:
       "A Flask-powered digital award system with an intuitive hub UI that seamlessly integrates with configurable and distinctive professional digital milestones. Responsive form-based UI with multi-step validation, real-time feedback, and an elegant Bootstrap design system.",
@@ -238,7 +238,7 @@ export const projectsData = [
   },
   {
     id: 16,
-    name: "portfolio",
+    name: "Portfolio",
     tagline: "This Portfolio — Built From Scratch",
     description:
       "A modern, opinionated portfolio built with Next.js, React, and Tailwind CSS. Features particle canvas backgrounds, 3D tilt project cards, custom cursor, preloader animations, scroll-linked progress bar, static blog engine, and GitHub Pages deployment pipeline.",
