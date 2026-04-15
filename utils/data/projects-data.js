@@ -117,7 +117,7 @@ export const projectsData = [
     category: "Full Stack",
     featured: true,
     code: "https://github.com/Harshitgupta5290/rechr",
-    demo: "",
+    demo: "https://rechr.vercel.app/",
   },
   {
     id: 7,
