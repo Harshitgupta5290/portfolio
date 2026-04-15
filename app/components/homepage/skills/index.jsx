@@ -1,22 +1,17 @@
 "use client";
 // @flow strict
 
-import { skillsData } from "@/utils/data/skills";
+import { skillsData, categoryStats } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
+// Split skills evenly across 3 marquee rows
+const rowSize = Math.ceil(skillsData.length / 3);
 const skillGroups = [
-  skillsData.slice(0, 9),
-  skillsData.slice(9, 18),
-  skillsData.slice(18),
-];
-
-const categories = [
-  { label: "Backend", count: 8, color: "#16f2b3" },
-  { label: "Frontend", count: 6, color: "#a78bfa" },
-  { label: "AI / ML", count: 8, color: "#ec4899" },
-  { label: "DevOps", count: 5, color: "#f59e0b" },
+  skillsData.slice(0, rowSize),
+  skillsData.slice(rowSize, rowSize * 2),
+  skillsData.slice(rowSize * 2),
 ];
 
 function SkillPill({ skill }) {
@@ -64,9 +59,9 @@ function Skills() {
         <div className="w-12 h-[3px] bg-gradient-to-r from-violet-400 to-[#16f2b3] mt-5 rounded-full" />
       </div>
 
-      {/* Category badges */}
+      {/* Category badges — counts derived dynamically */}
       <div className="flex justify-center flex-wrap gap-3 mb-12 px-4">
-        {categories.map(({ label, count, color }) => (
+        {categoryStats.map(({ label, count, color }) => (
           <div
             key={label}
             className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#1b2c6860] bg-[#0d1224] hover:border-[#1b2c68] transition-colors duration-200"

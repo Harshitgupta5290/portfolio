@@ -85,6 +85,7 @@ import fastapi from '../app/assets/svg/skills/fastapi.svg'
 import flask from '../app/assets/svg/skills/flask.svg'
 import nodejs from '../app/assets/svg/skills/nodejs.svg'
 import redis from '../app/assets/svg/skills/redis.svg'
+import sqlite from '../app/assets/svg/skills/sqlite.svg'
 
 
 
@@ -112,6 +113,7 @@ export const skillsImage = (skill) => {
     case 'javascript':
       return javascript;
     case 'next js':
+    case 'next.js':
       return nextJS;
     case 'nuxt js':
       return nuxtJS;
@@ -244,6 +246,7 @@ export const skillsImage = (skill) => {
     case 'pandas':
       return pandas;
     case 'sklearn':
+    case 'scikit-learn':
       return scikitlearn;
     case '.net':
       return dotnet;
@@ -260,9 +263,12 @@ export const skillsImage = (skill) => {
     case 'flask':
       return flask;
     case 'node js':
+    case 'node.js':
       return nodejs;
     case 'redis':
       return redis;
+    case 'sqlite':
+      return sqlite;
     default:
       return null;
   }
