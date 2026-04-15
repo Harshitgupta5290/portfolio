@@ -6,7 +6,27 @@ import Link from "next/link";
 import { FaArrowRight, FaCloud, FaDatabase, FaCode, FaLink, FaBrain, FaGlobe } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
-const featured = certifications.filter((c) => c.featured);
+const issuerWeight = {
+  Google:      100,
+  AWS:         100,
+  Microsoft:   100,
+  Oracle:       90,
+  Meta:         80,
+  IBM:          80,
+  Coursera:     60,
+  LinkedIn:     50,
+  HackerRank:   30,
+  Sololearn:    10,
+};
+
+const featured = [...certifications]
+  .filter((c) => c.featured)
+  .sort((a, b) => {
+    const wa = issuerWeight[a.issuer] ?? 40;
+    const wb = issuerWeight[b.issuer] ?? 40;
+    if (wb !== wa) return wb - wa;
+    return Number(b.year) - Number(a.year);
+  });
 
 const categoryIcons = {
   "Cloud & AI":      FaCloud,
@@ -217,7 +237,7 @@ function Certifications() {
 
       {/* ── Featured certs grid ─────────────────────────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-        {featured.map((cert) => (
+        {featured.slice(0, 6).map((cert) => (
           <FeaturedCertCard key={cert.id} cert={cert} />
         ))}
       </div>
