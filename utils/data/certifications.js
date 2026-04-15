@@ -63,10 +63,17 @@ export const certifications = [
   // ← Redundant — SQL (Advanced) + SQL (Intermediate) already present
 
   // ── Programming ──────────────────────────────────────────────────────────
-  // { id: 7, title: "Python (Basic)", issuer: "HackerRank", year: "2023", category: "Programming", featured: true,
-  //   description: "Validated foundational Python programming skills including data types, control flow, functions, and OOP basics.",
-  //   tags: ["Python", "Programming"] },
-  // ← Upgrade to Python (Intermediate) first, then restore
+  {
+    id: 7,
+    title: "Python (Basic)",
+    issuer: "HackerRank",
+    year: "2023",
+    category: "Programming",
+    featured: true,
+    description:
+      "Validated foundational Python programming skills including data types, control flow, functions, and OOP basics.",
+    tags: ["Python", "Programming"],
+  },
 
   // { id: 8, title: "C Course", issuer: "Sololearn", year: "2021", category: "Programming", featured: false,
   //   description: "Completed C programming course covering pointers, memory management, data structures, and file handling.",
