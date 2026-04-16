@@ -52,7 +52,7 @@ export const projectsData = [
     category: "Full Stack",
     featured: true,
     code: "https://github.com/Harshitgupta5290/viBlog",
-    demo: "",
+    demo: "https://viblog.megaventure.co.in/",
   },
   {
     id: 2,
