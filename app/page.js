@@ -5,7 +5,6 @@ import HashScroll from "./components/helper/hash-scroll";
 import ScrollReveal from "./components/helper/scroll-reveal";
 
 // Below-fold sections — code-split and client-only to reduce initial bundle
-const Stats          = dynamic(() => import('./components/homepage/stats'),          { ssr: false });
 const Experience     = dynamic(() => import('./components/homepage/experience'),     { ssr: false });
 const Skills         = dynamic(() => import('./components/homepage/skills'),         { ssr: false });
 const Projects       = dynamic(() => import('./components/homepage/projects'),       { ssr: false });
@@ -24,7 +23,6 @@ export default function Home() {
       <AboutSection />
 
       {/* Below-fold — each fades up when scrolled into view */}
-      <ScrollReveal><Stats /></ScrollReveal>
       <ScrollReveal delay={0.05}><Experience /></ScrollReveal>
       <ScrollReveal delay={0.05}><Skills /></ScrollReveal>
       <ScrollReveal delay={0.05}><Projects /></ScrollReveal>

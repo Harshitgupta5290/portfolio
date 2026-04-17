@@ -2,15 +2,16 @@
 // @flow strict
 
 import { personalData } from "@/utils/data/personal-data";
-import { certCount, techStackCount, aiProjectCount, MICROSERVICES_COUNT } from "@/utils/data/computed-stats";
+import { certCount, techStackCount, aiProjectCount, MICROSERVICES_COUNT, API_LATENCY_REDUCTION } from "@/utils/data/computed-stats";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const aboutStats = [
-  { value: certCount,            suffix: "",  label: "Certifications", sub: "Oracle & Cloud" },
-  { value: techStackCount,       suffix: "+", label: "Tech Stack",      sub: "Python · AWS · LLMs" },
-  { value: MICROSERVICES_COUNT,  suffix: "+", label: "Microservices",   sub: "Designed & Shipped" },
-  { value: aiProjectCount,       suffix: "+", label: "AI Projects",     sub: "NLP · CV · RAG" },
+  { value: certCount,              suffix: "",  label: "Certifications",   sub: "Oracle & Cloud" },
+  { value: techStackCount,         suffix: "+", label: "Tech Stack",        sub: "Python · AWS · LLMs" },
+  { value: MICROSERVICES_COUNT,    suffix: "+", label: "Microservices",     sub: "Designed & Shipped" },
+  { value: aiProjectCount,         suffix: "+", label: "AI Projects",       sub: "NLP · CV · RAG" },
+  { value: API_LATENCY_REDUCTION,  suffix: "%", label: "API Latency Cut",   sub: "Optimised & Profiled" },
 ];
 
 const CORE_SKILLS = [
@@ -143,7 +144,7 @@ function AboutSection() {
           </div>
 
           {/* Stats row */}
-          <div role="list" aria-label="Key metrics" className="grid grid-cols-2 sm:grid-cols-4 gap-px border border-[var(--line)] rounded-xl overflow-hidden bg-[var(--surface-2)]">
+          <div role="list" aria-label="Key metrics" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px border border-[var(--line)] rounded-xl overflow-hidden bg-[var(--surface-2)]">
             {aboutStats.map((stat, i) => (
               <div
                 key={i}
@@ -177,15 +178,15 @@ function AboutSection() {
             <div aria-hidden="true" className="absolute -bottom-1.5 -right-1.5 w-6 h-6 border-b-2 border-r-2 border-violet-500/60 rounded-br-lg z-30" />
 
             {/* Image */}
-            <div className="relative rounded-xl overflow-hidden w-[200px] h-[250px] sm:w-[240px] sm:h-[300px] md:w-[280px] md:h-[360px]">
+            <div className="relative rounded-xl overflow-hidden w-[260px] h-[320px] sm:w-[320px] sm:h-[400px] md:w-[380px] md:h-[480px]">
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-[#16f2b3]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
               <Image
                 src={personalData.profile}
-                width={280}
-                height={360}
+                width={380}
+                height={480}
                 alt={`${personalData.name} — ${personalData.designation}`}
                 className="w-full h-full object-cover object-top"
-                sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 280px"
+                sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 380px"
                 priority
               />
               {/* Name overlay — visual only, real text is in h2 above */}
