@@ -45,6 +45,8 @@ const SingleProject = ({ project }) => {
             alt={name}
             width={1080}
             height={720}
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, 320px"
             className="w-80 h-64 transition-opacity duration-[0.7s] delay-[0.3s] rounded-lg group-hover:opacity-0"
           />
         </div>

@@ -4,7 +4,7 @@ export const blogsData = [
     slug: 'building-production-microservices-python-flask',
     title: 'Building Production-Grade Microservices with Python and Flask',
     description:
-      'A practical guide to designing, implementing, and scaling microservices architecture using Python and Flask — based on real experience building 20+ production services at CertifyMe.',
+      'A practical guide to designing, implementing, and scaling microservices architecture using Python and Flask — based on real experience building 20+ production services in a production SaaS platform.',
     published_at: '2025-03-10',
     reading_time_minutes: 9,
     tags: ['Python', 'Flask', 'Microservices', 'Backend'],
@@ -440,7 +440,7 @@ def invalidation_listener():
     slug: 'docker-python-microservices-production',
     title: 'Docker Best Practices for Python Microservices in Production',
     description:
-      'Running Python microservices in Docker is easy. Running them well in production is not. Here are the 8 practices I wish I had followed from day one at CertifyMe.',
+      'Running Python microservices in Docker is easy. Running them well in production is not. Here are the 8 practices I wish I had followed from day one in a production environment.',
     published_at: '2025-04-20',
     reading_time_minutes: 9,
     tags: ['Docker', 'Python', 'DevOps', 'Microservices'],
@@ -1826,7 +1826,7 @@ v2_bp = Blueprint('v2', __name__, url_prefix='/v2')
     slug: 'real-world-lessons-certifyme-backend',
     title: '20 Production Microservices Later: What I Learned Building the CertifyMe Backend',
     description:
-      'A candid retrospective on building and scaling the backend platform at CertifyMe — the decisions that paid off, the ones that cost us, and what I would do differently starting from scratch today.',
+      'A candid retrospective on building and scaling a production SaaS backend — the decisions that paid off, the ones that cost us, and what I would do differently starting from scratch today.',
     published_at: '2025-09-02',
     reading_time_minutes: 11,
     tags: ['Microservices', 'Python', 'Career', 'Backend', 'Production'],

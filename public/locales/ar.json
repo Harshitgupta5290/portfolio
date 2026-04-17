@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "نبذة عني",
+    "experience": "الخبرة",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "education": "التعليم",
+    "certifications": "الشهادات",
+    "blogs": "المدونة",
+    "contact": "تواصل",
+    "resume": "السيرة الذاتية"
+  },
+  "hero": {
+    "available": "متاح للتوظيف",
+    "titles": ["مهندس بنية خلفية", "مطور متكامل", "مهندس ذكاء اصطناعي", "مهندس برمجيات"],
+    "contact": "تواصل معي",
+    "getResume": "تحميل السيرة الذاتية",
+    "stat1Label": "مستخدم متأثر",
+    "stat2Label": "وقت التشغيل",
+    "stat3Label": "التقنيات"
+  },
+  "about": { "label": "نبذة عني", "coreSkills": "المهارات الأساسية", "availability": "متاح للفرص" },
+  "projects": { "label": "المشاريع", "viewCode": "عرض الكود", "liveDemo": "عرض مباشر", "filterAll": "الكل" },
+  "contact": { "label": "تواصل", "send": "إرسال", "name": "اسمك", "email": "بريدك الإلكتروني", "message": "رسالتك" },
+  "theme": { "light": "الوضع الفاتح", "dark": "الوضع الداكن" },
+  "language": { "select": "اختر اللغة" }
+}

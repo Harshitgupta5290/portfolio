@@ -8,7 +8,7 @@ import GlowCard from "../../helper/glow-card";
 
 function Education() {
   return (
-    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       <Image
         src="/section.svg"
         alt="Hero"
@@ -25,7 +25,7 @@ function Education() {
       <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
         <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold tracking-tight">
           <span className="text-[#16f2b3] font-mono select-none">{'{ '}</span>
-          <span className="text-white">Education</span>
+          <span className="text-[var(--ink)]">Education</span>
           <span className="text-[#16f2b3] font-mono select-none">{' }'}</span>
         </h2>
         <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
@@ -44,7 +44,7 @@ function Education() {
               {
                 educations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
-                    <div className="p-3 relative text-white">
+                    <div className="p-3 relative text-[var(--ink)]">
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"

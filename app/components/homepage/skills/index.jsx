@@ -18,7 +18,7 @@ function SkillPill({ skill }) {
   const img = skillsImage(skill);
   return (
     <div className="group relative mx-2 flex-shrink-0 cursor-default">
-      <div className="relative flex items-center gap-3 px-5 py-3 rounded-xl border border-[#1b2c6840] bg-[#0d1224] hover:border-[#16f2b3]/40 hover:bg-[#16f2b305] transition-all duration-300 overflow-hidden">
+      <div className="relative flex items-center gap-3 px-5 py-3 rounded-xl border border-[var(--line)] bg-[var(--card)] hover:border-[#16f2b3]/40 hover:bg-[#16f2b305] transition-all duration-300 overflow-hidden">
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-all duration-700 ease-in-out" />
         {img && (
           <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -33,7 +33,7 @@ function SkillPill({ skill }) {
             />
           </div>
         )}
-        <span className="text-[#8b98a5] group-hover:text-white text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap">
+        <span className="text-[var(--ink-2)] group-hover:text-[var(--ink)] text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap">
           {skill}
         </span>
       </div>
@@ -43,7 +43,7 @@ function SkillPill({ skill }) {
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       {/* Top gradient line */}
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
@@ -64,10 +64,10 @@ function Skills() {
         {categoryStats.map(({ label, count, color }) => (
           <div
             key={label}
-            className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#1b2c6860] bg-[#0d1224] hover:border-[#1b2c68] transition-colors duration-200"
+            className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-[var(--line)] bg-[var(--card)] hover:border-[var(--ink-3)] transition-colors duration-200"
           >
             <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-            <span className="text-gray-400 text-xs font-mono">{label}</span>
+            <span className="text-[var(--ink-2)] text-xs font-mono">{label}</span>
             <span
               className="text-xs font-bold font-mono px-1.5 py-0.5 rounded"
               style={{ color, backgroundColor: `${color}18` }}
@@ -80,8 +80,8 @@ function Skills() {
 
       {/* Marquee rows with edge fades */}
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10 bg-gradient-to-r from-[#0d1224] to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10 bg-gradient-to-l from-[#0d1224] to-transparent pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10 bg-gradient-to-r from-[var(--bg)] to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10 bg-gradient-to-l from-[var(--bg)] to-transparent pointer-events-none" />
 
         <div className="flex flex-col gap-5 py-2">
           <Marquee gradient={false} speed={38} pauseOnHover direction="left">
@@ -106,9 +106,9 @@ function Skills() {
 
       {/* Bottom status pill */}
       <div className="flex justify-center mt-12">
-        <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-[#1b2c6840] bg-[#0d1224]/60">
+        <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-[var(--line)] bg-[var(--card)]">
           <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />
-          <span className="text-gray-500 text-xs font-mono tracking-wider">
+          <span className="text-[var(--ink-2)] text-xs font-mono tracking-wider">
             Always learning · Always shipping
           </span>
         </div>

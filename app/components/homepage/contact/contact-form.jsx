@@ -41,19 +41,19 @@ function ContactForm() {
   };
 
   const fieldClass = (field) =>
-    `w-full bg-[#080d1a] border rounded-lg px-4 py-3 text-white text-sm outline-none transition-all duration-300 placeholder:text-gray-700 font-mono ${
+    `w-full bg-[var(--surface-2)] border rounded-lg px-4 py-3 text-[var(--ink)] text-sm outline-none transition-all duration-300 placeholder:text-[var(--ink-3)] font-mono ${
       focused === field
         ? "border-[#16f2b3]/60 shadow-[0_0_16px_rgba(22,242,179,0.08)]"
-        : "border-[#1b2c6840] hover:border-[#1b2c6880]"
+        : "border-[var(--line)] hover:border-[var(--ink-3)]"
     }`;
 
   return (
     <div className="flex flex-col h-full">
       <p className="text-[10px] text-gray-600 uppercase tracking-widest font-mono mb-5">
-        // send a message
+        {/* send a message */}
       </p>
 
-      <div className="relative rounded-xl border border-[#1b2c6840] bg-[#080d1a]/80 overflow-hidden flex-1">
+      <div className="relative rounded-xl border border-[var(--line)] bg-[var(--surface)] overflow-hidden flex-1">
         {/* Top accent line */}
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#16f2b3]/50 to-transparent" />
 
@@ -61,7 +61,7 @@ function ContactForm() {
           {/* Name + Email row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] text-gray-500 uppercase tracking-widest font-mono">
+              <label className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest font-mono">
                 Name
               </label>
               <input
@@ -77,7 +77,7 @@ function ContactForm() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] text-gray-500 uppercase tracking-widest font-mono">
+              <label className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest font-mono">
                 Email
               </label>
               <input
@@ -104,10 +104,10 @@ function ContactForm() {
           {/* Message */}
           <div className="flex flex-col gap-1.5">
             <div className="flex items-center justify-between">
-              <label className="text-[10px] text-gray-500 uppercase tracking-widest font-mono">
+              <label className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest font-mono">
                 Message
               </label>
-              <span className="text-[10px] text-gray-700 font-mono">
+              <span className="text-[10px] text-[var(--ink-3)] font-mono">
                 {userInput.message.length}/500
               </span>
             </div>
@@ -137,12 +137,12 @@ function ContactForm() {
             disabled={isLoading}
             className="group relative flex items-center justify-center gap-2.5 w-full rounded-lg p-[1px] bg-gradient-to-r from-violet-600 to-[#16f2b3] transition-all duration-300 hover:shadow-[0_0_28px_rgba(22,242,179,0.2)] disabled:opacity-40 disabled:cursor-not-allowed"
           >
-            <div className="flex items-center justify-center gap-2.5 w-full bg-[#080d1a] group-hover:bg-[#080d1a]/70 rounded-[7px] px-6 py-3 transition-all duration-300">
+            <div className="flex items-center justify-center gap-2.5 w-full bg-[var(--card)] group-hover:bg-[var(--surface-2)] rounded-[7px] px-6 py-3 transition-all duration-300">
               {isLoading ? (
-                <span className="text-sm font-mono text-gray-300">Sending...</span>
+                <span className="text-sm font-mono text-[var(--ink-2)]">Sending...</span>
               ) : (
                 <>
-                  <span className="text-sm font-semibold text-white uppercase tracking-wider">
+                  <span className="text-sm font-semibold text-[var(--ink)] uppercase tracking-wider">
                     Send Message
                   </span>
                   <TbMailForward

@@ -1,14 +1,14 @@
 export const personalData = {
   name: "Harshit Gupta",
   profile: '/profile.png',
-  designation: "Software Engineer — Full Stack & AI",
-  description: "I build backend systems that scale — and products that matter. At CertifyMe, I architected 20+ microservices powering credential issuance, verification, and enterprise integrations for global clients. My stack runs deep: Python, Flask, MySQL, Docker, AWS, and Next.js — but what drives me is shipping things that actually work in production. I'm now channeling that into AI-first product development — LLM-powered workflows, RAG pipelines, NLP systems — turning cutting-edge models into real, revenue-generating features. If you're building something ambitious and need an engineer who can go from 0 to 1 and 1 to scale, let's talk.",
+  designation: "Full Stack & AI Engineer",
+  description: "I don't just write code — I build systems that outlast the sprint. I've architected distributed microservice platforms handling millions of credential transactions for enterprise clients across the globe, taking products from raw idea to production-grade infrastructure. My foundation spans the full stack: Python, Flask, Node.js, React, Next.js, MySQL, Docker, AWS — and what I bring beyond the stack is the instinct to make hard calls under pressure and ship things that actually hold. These days I'm deep in AI-native product development — designing LLM-powered workflows, RAG pipelines, and intelligent automation that turn state-of-the-art models into real, revenue-driving features. I care about craft, speed, and outcomes. If you're building something that demands both engineering rigor and product thinking — I'm the person you want in the room.",
   email: 'harshitgupta5290@gmail.com',
-  phone: '+919971062117',
+  phone: '+91 9971062117',
   address: 'New Delhi, India',
   github: 'https://github.com/harshitgupta5290',
   linkedIn: 'https://www.linkedin.com/in/harshitgupta1215/',
-  instagram: 'https://www.instagram.com/i_.harshitgupta?igsh=aDh2ZTVrczVrbjNk',
+  instagram: 'https://www.instagram.com/i_.harshitgupta',
   devUsername: "harshitgupta5290",
   resume: "/Harshit_Gupta_Resume.pdf"
 }

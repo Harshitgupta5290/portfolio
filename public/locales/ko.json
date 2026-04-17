@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "소개",
+    "experience": "경력",
+    "skills": "기술",
+    "projects": "프로젝트",
+    "education": "학력",
+    "certifications": "자격증",
+    "blogs": "블로그",
+    "contact": "연락처",
+    "resume": "이력서"
+  },
+  "hero": {
+    "available": "채용 가능",
+    "titles": ["백엔드 아키텍트", "풀스택 개발자", "AI 엔지니어", "소프트웨어 엔지니어"],
+    "contact": "연락하기",
+    "getResume": "이력서 다운로드",
+    "stat1Label": "영향 사용자",
+    "stat2Label": "가동 시간",
+    "stat3Label": "기술 스택"
+  },
+  "about": { "label": "소개", "coreSkills": "핵심 기술", "availability": "기회에 열려 있음" },
+  "projects": { "label": "프로젝트", "viewCode": "코드 보기", "liveDemo": "라이브 데모", "filterAll": "전체" },
+  "contact": { "label": "연락처", "send": "메시지 보내기", "name": "이름", "email": "이메일", "message": "메시지" },
+  "theme": { "light": "라이트 모드", "dark": "다크 모드" },
+  "language": { "select": "언어 선택" }
+}

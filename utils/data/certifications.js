@@ -69,7 +69,7 @@ export const certifications = [
     issuer: "HackerRank",
     year: "2023",
     category: "Programming",
-    featured: true,
+    featured: false,
     description:
       "Validated foundational Python programming skills including data types, control flow, functions, and OOP basics.",
     tags: ["Python", "Programming"],
@@ -87,7 +87,7 @@ export const certifications = [
     issuer: "Meta",
     year: "2023",
     category: "Web Development",
-    featured: true,
+    featured: false,
     description:
       "Covered HTML, CSS, JavaScript fundamentals, and React basics as part of Meta's Front-End Developer Professional Certificate.",
     tags: ["HTML", "CSS", "JavaScript", "React"],

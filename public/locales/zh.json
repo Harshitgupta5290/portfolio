@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "关于",
+    "experience": "经历",
+    "skills": "技能",
+    "projects": "项目",
+    "education": "教育",
+    "certifications": "证书",
+    "blogs": "博客",
+    "contact": "联系",
+    "resume": "简历"
+  },
+  "hero": {
+    "available": "可接受招聘",
+    "titles": ["后端架构师", "全栈开发者", "AI工程师", "软件工程师"],
+    "contact": "联系我",
+    "getResume": "下载简历",
+    "stat1Label": "影响用户数",
+    "stat2Label": "可用性",
+    "stat3Label": "技术栈"
+  },
+  "about": { "label": "关于我", "coreSkills": "核心技能", "availability": "开放机会" },
+  "projects": { "label": "项目", "viewCode": "查看代码", "liveDemo": "在线演示", "filterAll": "全部" },
+  "contact": { "label": "联系", "send": "发送消息", "name": "您的姓名", "email": "您的邮箱", "message": "您的留言" },
+  "theme": { "light": "浅色模式", "dark": "深色模式" },
+  "language": { "select": "选择语言" }
+}

@@ -6,7 +6,7 @@ import BlogCard from './blog-card';
 
 function Blog() {
   return (
-    <div id='blogs' className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <div id='blogs' className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
@@ -17,7 +17,7 @@ function Blog() {
 
       <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
         <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-black tracking-tight">
-          <span className="text-white">Latest </span>
+          <span className="text-[var(--ink)]">Latest </span>
           <span className="text-[#16f2b3]">Blogs</span>
         </h2>
         <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />

@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "education": "Educação",
+    "certifications": "Certificações",
+    "blogs": "Blog",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "hero": {
+    "available": "Disponível para contratação",
+    "titles": ["Arquiteto Backend", "Desenvolvedor Full Stack", "Engenheiro de IA", "Engenheiro de Software"],
+    "contact": "Entre em contato",
+    "getResume": "Baixar Currículo",
+    "stat1Label": "Usuários Impactados",
+    "stat2Label": "Uptime",
+    "stat3Label": "Tecnologias"
+  },
+  "about": { "label": "Sobre mim", "coreSkills": "Habilidades Principais", "availability": "Aberto a oportunidades" },
+  "projects": { "label": "Projetos", "viewCode": "Ver Código", "liveDemo": "Demo ao Vivo", "filterAll": "Todos" },
+  "contact": { "label": "Contato", "send": "Enviar Mensagem", "name": "Seu Nome", "email": "Seu Email", "message": "Sua Mensagem" },
+  "theme": { "light": "Modo claro", "dark": "Modo escuro" },
+  "language": { "select": "Selecionar idioma" }
+}

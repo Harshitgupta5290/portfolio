@@ -10,20 +10,20 @@ const tagColors = [
 ];
 
 const gradients = [
-  'from-violet-900/60 to-[#0d1224]',
-  'from-pink-900/60 to-[#0d1224]',
-  'from-cyan-900/60 to-[#0d1224]',
+  'from-violet-900/60 to-[var(--card)]',
+  'from-pink-900/60 to-[var(--card)]',
+  'from-cyan-900/60 to-[var(--card)]',
 ];
 
 function BlogCard({ blog, index = 0 }) {
   return (
     <Link href={`/blog/${blog.slug}`}>
-      <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group cursor-pointer h-full flex flex-col">
+      <div className="border border-[var(--line)] hover:border-[var(--ink-3)] transition-all duration-500 bg-[var(--card)] rounded-lg relative group cursor-pointer h-full flex flex-col">
         <div className={`h-32 sm:h-40 lg:h-44 w-auto overflow-hidden rounded-t-lg bg-gradient-to-br ${gradients[index % gradients.length]} flex items-center justify-center relative`}>
           <p className="text-white/10 text-7xl font-black uppercase leading-none select-none px-4 text-center">
             {blog.tags?.[0] ?? 'BLOG'}
           </p>
-          <span className="absolute top-3 right-3 flex items-center gap-1 bg-[#0d1224]/80 border border-[#1b2c6840] text-gray-400 text-[10px] font-medium px-2 py-0.5 rounded-full">
+          <span className="absolute top-3 right-3 flex items-center gap-1 bg-[var(--card)] border border-[var(--line)] text-[var(--ink-2)] text-[10px] font-medium px-2 py-0.5 rounded-full">
             Harshit Gupta
           </span>
         </div>
@@ -38,11 +38,11 @@ function BlogCard({ blog, index = 0 }) {
             <span>{blog.reading_time_minutes} min read</span>
           </div>
 
-          <p className="text-base sm:text-lg font-medium text-white group-hover:text-violet-400 transition-colors duration-200 mb-2 line-clamp-2">
+          <p className="text-base sm:text-lg font-medium text-[var(--ink)] group-hover:text-violet-400 transition-colors duration-200 mb-2 line-clamp-2">
             {blog.title}
           </p>
 
-          <p className="text-sm text-[#d3d8e8] line-clamp-3 flex-1 mb-3">
+          <p className="text-sm text-[var(--ink-2)] line-clamp-3 flex-1 mb-3">
             {blog.description}
           </p>
 

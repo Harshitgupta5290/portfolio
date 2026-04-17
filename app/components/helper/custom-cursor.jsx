@@ -72,7 +72,7 @@ export default function CustomCursor() {
       document.removeEventListener("mouseover", onHoverStart);
       document.removeEventListener("mouseout", onHoverEnd);
     };
-  }, []);
+  }, [isVisible]);
 
   return (
     <>

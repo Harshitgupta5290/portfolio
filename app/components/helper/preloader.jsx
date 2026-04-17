@@ -2,10 +2,30 @@
 
 import { useEffect, useState } from "react";
 
+const PHRASES = [
+  "Compiling modules...",
+  "Connecting services...",
+  "Bundling assets...",
+  "Running type checks...",
+  "Loading portfolio...",
+  "Optimizing render...",
+  "Almost there...",
+];
+
 export default function Preloader() {
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const [phrase, setPhrase] = useState(PHRASES[0]);
+
+  useEffect(() => {
+    let idx = 0;
+    const phraseInterval = setInterval(() => {
+      idx = (idx + 1) % PHRASES.length;
+      setPhrase(PHRASES[idx]);
+    }, 400);
+    return () => clearInterval(phraseInterval);
+  }, []);
 
   useEffect(() => {
     let animFrame;
@@ -87,8 +107,8 @@ export default function Preloader() {
         <span className="preloader-percent">%</span>
       </div>
 
-      {/* Loading label */}
-      <div className="preloader-label">Initializing Portfolio</div>
+      {/* Loading label — cycles through technical phrases */}
+      <div className="preloader-label">{phrase}</div>
 
       {/* Progress bar */}
       <div className="preloader-bar-track">

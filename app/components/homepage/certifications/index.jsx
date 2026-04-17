@@ -49,8 +49,8 @@ function FeaturedCertCard({ cert }) {
     <div
       className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
       style={{
-        background: "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, #0a0d1a 100%)",
-        border: `1px solid rgba(255,255,255,0.08)`,
+        background: "linear-gradient(145deg, rgba(255,255,255,0.04) 0%, var(--card) 100%)",
+        border: `1px solid var(--line)`,
         boxShadow: `inset 0 1px 0 rgba(255,255,255,0.06)`,
       }}
     >
@@ -76,7 +76,7 @@ function FeaturedCertCard({ cert }) {
             <Icon size={11} />
             {cert.category}
           </span>
-          <span className="shrink-0 text-[10px] font-mono text-gray-500 bg-white/[0.05] px-2 py-0.5 rounded-full border border-white/[0.08]">
+          <span className="shrink-0 text-[10px] font-mono text-[var(--ink-3)] bg-[var(--surface-2)] px-2 py-0.5 rounded-full border border-[var(--line)]">
             {cert.year}
           </span>
         </div>
@@ -103,12 +103,12 @@ function FeaturedCertCard({ cert }) {
         </div>
 
         {/* Title */}
-        <p className="text-sm font-semibold text-white leading-snug flex-1">
+        <p className="text-sm font-semibold text-[var(--ink)] leading-snug flex-1">
           {cert.title}
         </p>
 
         {/* Description */}
-        <p className="text-[11px] text-gray-500 leading-relaxed">
+        <p className="text-[11px] text-[var(--ink-2)] leading-relaxed">
           {cert.description}
         </p>
 
@@ -148,7 +148,7 @@ const categorySummary = [...new Set(certifications.map((c) => c.category))].map(
 
 function Certifications() {
   return (
-    <div id="certifications" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <div id="certifications" className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       <Image
         src="/section.svg"
         alt=""
@@ -173,12 +173,12 @@ function Certifications() {
           ✦ Verified Credentials ✦
         </p>
         <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-          <span className="text-white">My </span>
+          <span className="text-[var(--ink)]">My </span>
           <span className="bg-gradient-to-r from-violet-400 via-[#16f2b3] to-pink-400 bg-clip-text text-transparent">
             Certifications
           </span>
         </h2>
-        <p className="mt-4 text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
+        <p className="mt-4 text-sm text-[var(--ink-2)] max-w-md mx-auto leading-relaxed">
           Professional credentials across Cloud AI, databases, web development,
           and programming — certified by industry-leading platforms.
         </p>
@@ -195,8 +195,8 @@ function Certifications() {
             key={label}
             className="relative flex flex-col items-center justify-center rounded-2xl py-5 sm:py-6 px-4 overflow-hidden"
             style={{
-              background: "rgba(255,255,255,0.03)",
-              border: "1px solid rgba(255,255,255,0.07)",
+              background: "var(--surface-2)",
+              border: "1px solid var(--line)",
             }}
           >
             <div
@@ -209,7 +209,7 @@ function Certifications() {
             >
               {value}+
             </span>
-            <span className="text-[10px] sm:text-xs text-gray-600 mt-1 tracking-widest uppercase">
+            <span className="text-[10px] sm:text-xs text-[var(--ink-3)] mt-1 tracking-widest uppercase">
               {label}
             </span>
           </div>

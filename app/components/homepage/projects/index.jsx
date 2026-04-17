@@ -61,8 +61,8 @@ function FeaturedCard({ project, large }) {
       onMouseLeave={onLeave}
       style={{
         ...tilt,
-        background: "linear-gradient(145deg, rgba(255,255,255,0.04) 0%, #080b18 100%)",
-        border: "1px solid rgba(255,255,255,0.08)",
+        background: "linear-gradient(145deg, rgba(255,255,255,0.04) 0%, var(--card) 100%)",
+        border: "1px solid var(--line)",
         boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
       }}
       className="group relative rounded-2xl overflow-hidden transition-all duration-200 h-full flex flex-col"
@@ -110,7 +110,7 @@ function FeaturedCard({ project, large }) {
 
         {/* Name + tagline */}
         <div>
-          <h3 className={`text-white font-bold leading-snug ${large ? "text-lg sm:text-xl" : "text-base"}`}>
+          <h3 className={`text-[var(--ink)] font-bold leading-snug ${large ? "text-lg sm:text-xl" : "text-base"}`}>
             {project.name}
           </h3>
           <p className="mt-1 text-[11px] font-medium tracking-wide" style={{ color: hex }}>
@@ -119,7 +119,7 @@ function FeaturedCard({ project, large }) {
         </div>
 
         {/* Description */}
-        <p className={`text-gray-500 leading-relaxed flex-1 ${large ? "text-xs line-clamp-4" : "text-[11px] line-clamp-3"}`}>
+        <p className={`text-[var(--ink-2)] leading-relaxed flex-1 ${large ? "text-xs line-clamp-4" : "text-[11px] line-clamp-3"}`}>
           {project.description}
         </p>
 
@@ -137,13 +137,13 @@ function FeaturedCard({ project, large }) {
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-4 pt-2 border-t border-white/[0.05]">
+        <div className="flex items-center gap-4 pt-2 border-t border-[var(--line)]">
           {project.code && (
             <Link
               href={project.code}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[10px] text-gray-500 hover:text-white transition-colors duration-200 group/link"
+              className="flex items-center gap-1.5 text-[10px] text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors duration-200 group/link"
             >
               <BsGithub size={13} className="group-hover/link:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all" />
               <span>View Source</span>
@@ -188,7 +188,7 @@ const Projects = () => {
         <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30 pointer-events-none" />
         <div className="flex items-center justify-start relative pb-3">
           <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-extrabold italic tracking-tighter">
-            <span className="text-white">My </span>
+            <span className="text-[var(--ink)]">My </span>
             <span className="bg-gradient-to-r from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">Projects</span>
           </h2>
           <div className="ml-4 flex-1 h-px bg-gradient-to-r from-[#16f2b3]/30 to-transparent" />
@@ -207,10 +207,10 @@ const Projects = () => {
               <span className="text-2xl sm:text-3xl font-black bg-gradient-to-br from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">
                 {value}
               </span>
-              <span className="text-[10px] text-gray-600 tracking-widest uppercase">{label}</span>
+              <span className="text-[10px] text-[var(--ink-3)] tracking-widest uppercase">{label}</span>
             </div>
           ))}
-          <div className="h-4 w-px bg-white/[0.08] hidden sm:block" />
+          <div className="h-4 w-px bg-[var(--line)] hidden sm:block" />
           <div className="flex flex-wrap gap-1.5">
             {[...new Set(projectsData.map((p) => p.category))].map((cat) => {
               const hex = projectCategoryMeta[cat]?.hex ?? "#16f2b3";
@@ -253,16 +253,16 @@ const Projects = () => {
         </div>
 
         {/* ── CTA ── */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl px-6 py-5 border border-white/[0.06] bg-white/[0.02]">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl px-6 py-5 border border-[var(--line)] bg-[var(--surface)]">
           <div>
-            <p className="text-white font-semibold text-sm">
+            <p className="text-[var(--ink)] font-semibold text-sm">
               Explore the full portfolio →{" "}
-              <span className="text-gray-500 font-normal">
+              <span className="text-[var(--ink-2)] font-normal">
                 {totalProjects - featuredProjects.length} more projects across{" "}
                 {totalCategories} domains
               </span>
             </p>
-            <p className="text-[11px] text-gray-600 mt-0.5">
+            <p className="text-[11px] text-[var(--ink-3)] mt-0.5">
               Including AI/ML engines, 3D experiences, dev tools, and open-source contributions.
             </p>
           </div>

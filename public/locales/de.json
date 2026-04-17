@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "education": "Ausbildung",
+    "certifications": "Zertifikate",
+    "blogs": "Blog",
+    "contact": "Kontakt",
+    "resume": "Lebenslauf"
+  },
+  "hero": {
+    "available": "Verfügbar zur Einstellung",
+    "titles": ["Backend-Architekt", "Full-Stack-Entwickler", "KI-Ingenieur", "Software-Ingenieur"],
+    "contact": "Kontakt aufnehmen",
+    "getResume": "Lebenslauf herunterladen",
+    "stat1Label": "Nutzer",
+    "stat2Label": "Verfügbarkeit",
+    "stat3Label": "Technologien"
+  },
+  "about": { "label": "Über mich", "coreSkills": "Kernfähigkeiten", "availability": "Offen für Angebote" },
+  "projects": { "label": "Projekte", "viewCode": "Code ansehen", "liveDemo": "Live-Demo", "filterAll": "Alle" },
+  "contact": { "label": "Kontakt", "send": "Nachricht senden", "name": "Ihr Name", "email": "Ihre E-Mail", "message": "Ihre Nachricht" },
+  "theme": { "light": "Hellmodus", "dark": "Dunkelmodus" },
+  "language": { "select": "Sprache auswählen" }
+}

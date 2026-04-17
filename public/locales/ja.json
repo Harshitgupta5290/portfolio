@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "自己紹介",
+    "experience": "経験",
+    "skills": "スキル",
+    "projects": "プロジェクト",
+    "education": "学歴",
+    "certifications": "資格",
+    "blogs": "ブログ",
+    "contact": "お問い合わせ",
+    "resume": "履歴書"
+  },
+  "hero": {
+    "available": "採用可能",
+    "titles": ["バックエンドアーキテクト", "フルスタック開発者", "AIエンジニア", "ソフトウェアエンジニア"],
+    "contact": "お問い合わせ",
+    "getResume": "履歴書をダウンロード",
+    "stat1Label": "影響ユーザー数",
+    "stat2Label": "稼働率",
+    "stat3Label": "技術スタック"
+  },
+  "about": { "label": "自己紹介", "coreSkills": "コアスキル", "availability": "機会に開放的" },
+  "projects": { "label": "プロジェクト", "viewCode": "コードを見る", "liveDemo": "ライブデモ", "filterAll": "すべて" },
+  "contact": { "label": "お問い合わせ", "send": "送信", "name": "お名前", "email": "メールアドレス", "message": "メッセージ" },
+  "theme": { "light": "ライトモード", "dark": "ダークモード" },
+  "language": { "select": "言語を選択" }
+}

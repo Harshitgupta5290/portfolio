@@ -1,7 +1,7 @@
 // @flow strict
 import { personalData } from "@/utils/data/personal-data";
 import Link from 'next/link';
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { HiDocumentDownload } from "react-icons/hi";
 
 function Footer() {
@@ -31,6 +31,14 @@ function Footer() {
               aria-label="LinkedIn"
             >
               <BsLinkedin size={20} />
+            </Link>
+            <Link
+              target="_blank"
+              href={personalData.instagram}
+              className="text-gray-400 hover:text-[#16f2b3] transition-colors duration-300"
+              aria-label="Instagram"
+            >
+              <BsInstagram size={20} />
             </Link>
             <Link
               target="_blank"

@@ -13,8 +13,10 @@
     "@emailjs/browser": "^4.3.1",
     "@next/third-parties": "^14.2.29",
     "axios": "^1.6.8",
+    "framer-motion": "^12.38.0",
     "lottie-react": "^2.4.1",
     "next": "14.2.29",
+    "next-themes": "^0.4.6",
     "nodemailer": "^6.9.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -23,10 +25,12 @@
     "react-icons": "^4.11.0",
     "react-toastify": "^10.0.4",
     "resend": "^6.9.3",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "critters": "^0.0.23",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.29",
     "postcss": "^8.4.38",

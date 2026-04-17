@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "about": "परिचय",
+    "experience": "अनुभव",
+    "skills": "कौशल",
+    "projects": "प्रोजेक्ट्स",
+    "education": "शिक्षा",
+    "certifications": "प्रमाणपत्र",
+    "blogs": "ब्लॉग",
+    "contact": "संपर्क",
+    "resume": "रेज़्यूमे"
+  },
+  "hero": {
+    "available": "उपलब्ध — हायर करें",
+    "titles": ["बैकएंड आर्किटेक्ट", "फुल स्टैक डेवलपर", "AI इंजीनियर", "सॉफ्टवेयर इंजीनियर"],
+    "contact": "संपर्क करें",
+    "getResume": "रेज़्यूमे डाउनलोड करें",
+    "stat1Label": "उपयोगकर्ता",
+    "stat2Label": "अपटाइम",
+    "stat3Label": "टेक्नोलॉजी"
+  },
+  "about": {
+    "label": "परिचय",
+    "designation": "सॉफ्टवेयर इंजीनियर — फुल स्टैक & AI",
+    "coreSkills": "मुख्य कौशल",
+    "availability": "अवसरों के लिए उपलब्ध"
+  },
+  "projects": { "label": "प्रोजेक्ट्स", "viewCode": "कोड देखें", "liveDemo": "लाइव डेमो", "filterAll": "सभी" },
+  "contact": { "label": "संपर्क", "send": "संदेश भेजें", "name": "आपका नाम", "email": "आपका ईमेल", "message": "आपका संदेश" },
+  "theme": { "light": "लाइट मोड", "dark": "डार्क मोड" },
+  "language": { "select": "भाषा चुनें" }
+}

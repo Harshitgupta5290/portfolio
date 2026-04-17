@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "О себе",
+    "experience": "Опыт",
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "education": "Образование",
+    "certifications": "Сертификаты",
+    "blogs": "Блог",
+    "contact": "Контакты",
+    "resume": "Резюме"
+  },
+  "hero": {
+    "available": "Открыт к найму",
+    "titles": ["Backend-архитектор", "Full Stack разработчик", "ИИ-инженер", "Программный инженер"],
+    "contact": "Связаться",
+    "getResume": "Скачать резюме",
+    "stat1Label": "Пользователей",
+    "stat2Label": "Доступность",
+    "stat3Label": "Технологий"
+  },
+  "about": { "label": "О себе", "coreSkills": "Ключевые навыки", "availability": "Открыт к возможностям" },
+  "projects": { "label": "Проекты", "viewCode": "Смотреть код", "liveDemo": "Демо", "filterAll": "Все" },
+  "contact": { "label": "Контакты", "send": "Отправить", "name": "Ваше имя", "email": "Ваш email", "message": "Ваше сообщение" },
+  "theme": { "light": "Светлая тема", "dark": "Тёмная тема" },
+  "language": { "select": "Выбрать язык" }
+}
