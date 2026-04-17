@@ -178,15 +178,15 @@ function AboutSection() {
             <div aria-hidden="true" className="absolute -bottom-1.5 -right-1.5 w-6 h-6 border-b-2 border-r-2 border-violet-500/60 rounded-br-lg z-30" />
 
             {/* Image */}
-            <div className="relative rounded-xl overflow-hidden w-[260px] h-[320px] sm:w-[320px] sm:h-[400px] md:w-[380px] md:h-[480px]">
+            <div className="relative rounded-xl overflow-hidden w-[220px] h-[275px] sm:w-[270px] sm:h-[340px] md:w-[320px] md:h-[410px]">
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-[#16f2b3]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
               <Image
                 src={personalData.profile}
-                width={380}
-                height={480}
+                width={320}
+                height={410}
                 alt={`${personalData.name} — ${personalData.designation}`}
                 className="w-full h-full object-cover object-top"
-                sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 380px"
+                sizes="(max-width: 640px) 220px, (max-width: 768px) 270px, 320px"
                 priority
               />
               {/* Name overlay — visual only, real text is in h2 above */}

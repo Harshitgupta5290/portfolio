@@ -62,10 +62,18 @@ function Education() {
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                            {education.title}
+                          <p className="text-xs text-[var(--ink)] uppercase tracking-widest mb-0.5">
+                            {education.degree}
                           </p>
-                          <p className="text-sm sm:text-base">{education.institution}</p>
+                          {education.title && (
+                            <p className="text-base sm:text-lg font-semibold text-[var(--ink)] leading-snug">
+                              {education.title}
+                            </p>
+                          )}
+                          <p className="text-sm text-[var(--ink-2)] mt-1">{education.institution}</p>
+                          {education.location && (
+                            <p className="text-xs text-[var(--ink-3)] mt-0.5">{education.location}</p>
+                          )}
                           {education.grade && (
                             <p className="text-xs sm:text-sm text-[#16f2b3] mt-1">{education.grade}</p>
                           )}
