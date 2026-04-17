@@ -86,7 +86,7 @@ function AboutSection() {
       <div aria-hidden="true" className="orb orb-cyan w-56 h-56 bottom-0 -left-16 opacity-25" style={{ animationDelay: "-4s" }} />
 
       {/* Vertical label */}
-      <div aria-hidden="true" className="hidden lg:flex flex-col items-center absolute top-16 -right-8 z-10">
+      <div aria-hidden="true" className="hidden lg:flex flex-col items-center absolute top-16 -left-8 z-10">
         <span className="section-heading rotate-90 p-2 px-5">ABOUT ME</span>
         <span className="h-36 w-[2px] bg-gradient-to-b from-violet-500/50 to-transparent mt-2" />
       </div>
@@ -94,7 +94,7 @@ function AboutSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
         {/* ── Left: Text ── */}
-        <div className="order-2 lg:order-1 flex flex-col gap-6">
+        <div className="order-2 lg:order-2 flex flex-col gap-6">
 
           {/* Section label — ATS-readable h2 */}
           <div className="flex items-center gap-3">
@@ -162,7 +162,7 @@ function AboutSection() {
         </div>
 
         {/* ── Right: Profile image ── */}
-        <div className="flex justify-center order-1 lg:order-2">
+        <div className="flex justify-center order-1 lg:order-1">
           <div
             ref={imgRef}
             onMouseMove={onImgMove}
