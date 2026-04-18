@@ -93,7 +93,7 @@ function HeroSection() {
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 w-full">
         {/* Left: Text content */}
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-10 md:pb-6 lg:pb-0 lg:pt-10">
+        <div className="order-1 flex flex-col items-start justify-center p-2 pb-10 md:pb-6 lg:pb-0 lg:pt-10">
 
           {/* Availability pill */}
           <div className="mb-5 flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#16f2b320] bg-[#16f2b308]">
@@ -180,7 +180,7 @@ function HeroSection() {
         </div>
 
         {/* Right: Globe */}
-        <div className="order-1 lg:order-2 flex items-center justify-center">
+        <div className="order-2 flex items-center justify-center">
           <div className="relative flex flex-col items-center gap-3 w-full">
             {/* Header label */}
             <div className="flex items-center gap-2 self-start">
@@ -195,7 +195,7 @@ function HeroSection() {
               onMouseLeave={handleMouseLeave}
               onMouseEnter={handleMouseEnter}
               style={tiltStyle}
-              className={`relative w-full max-w-[560px] aspect-square ${isHovering ? "" : "hero-code-float"}`}
+              className={`relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[560px] aspect-square ${isHovering ? "" : "hero-code-float"}`}
             >
               {/* Ambient glow behind globe */}
               <div aria-hidden="true" className="absolute inset-0 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(22,242,179,0.06)_0%,transparent_70%)] pointer-events-none" />

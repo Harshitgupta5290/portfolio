@@ -66,7 +66,7 @@ function ContactSection() {
           {/* Social links */}
           <div className="mt-2">
             <p className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest mb-3">Find me on</p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap">
               {[
                 { href: personalData.github,    Icon: IoLogoGithub,   label: "GitHub"    },
                 { href: personalData.linkedIn,  Icon: BiLogoLinkedin, label: "LinkedIn"  },
