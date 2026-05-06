@@ -1,6 +1,8 @@
+"use client";
 // @flow strict
 
 import { certifications, categoryMeta, issuerMeta } from "@/utils/data/certifications";
+import { useLocale } from "@/app/context/locale-context";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaCloud, FaDatabase, FaCode, FaLink, FaBrain, FaGlobe } from "react-icons/fa";
@@ -147,6 +149,7 @@ const categorySummary = [...new Set(certifications.map((c) => c.category))].map(
 }));
 
 function Certifications() {
+  const { t } = useLocale();
   return (
     <div id="certifications" className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       <Image
@@ -170,26 +173,25 @@ function Certifications() {
       {/* ── Section header ──────────────────────────────────────── */}
       <div className="text-center mt-12 mb-10">
         <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[#16f2b3] mb-3">
-          ✦ Verified Credentials ✦
+          {t("certifications.badge")}
         </p>
         <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
           <span className="text-[var(--ink)]">My </span>
           <span className="bg-gradient-to-r from-violet-400 via-[#16f2b3] to-pink-400 bg-clip-text text-transparent">
-            Certifications
+            {t("certifications.label")}
           </span>
         </h2>
         <p className="mt-4 text-sm text-[var(--ink-2)] max-w-md mx-auto leading-relaxed">
-          Professional credentials across Cloud AI, databases, web development,
-          and programming — certified by industry-leading platforms.
+          {t("certifications.subtitle")}
         </p>
       </div>
 
       {/* ── Stats strip ─────────────────────────────────────────── */}
       <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-10">
         {[
-          { value: certifications.length, label: "Certifications", color: "#16f2b3" },
-          { value: new Set(certifications.map((c) => c.category)).size, label: "Categories", color: "#8b5cf6" },
-          { value: new Set(certifications.map((c) => c.issuer)).size,   label: "Issuers",     color: "#ec4899" },
+          { value: certifications.length, label: t("certifications.label"), color: "#16f2b3" },
+          { value: new Set(certifications.map((c) => c.category)).size, label: t("certifications.statsLabel2"), color: "#8b5cf6" },
+          { value: new Set(certifications.map((c) => c.issuer)).size,   label: t("certifications.statsLabel3"), color: "#ec4899" },
         ].map(({ value, label, color }) => (
           <div
             key={label}
@@ -249,7 +251,7 @@ function Certifications() {
           role="button"
           className="group flex items-center gap-2 rounded-full px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-violet-300 no-underline hover:no-underline transition-all duration-300 hover:gap-3 hover:text-violet-200 hover:shadow-[0_0_24px_-4px_rgba(139,92,246,0.5)] border border-violet-500/30 hover:border-violet-500/60 bg-gradient-to-r from-violet-500/10 to-pink-500/10"
         >
-          View All {certifications.length} Certifications
+          {t("certifications.viewAll")} ({certifications.length})
           <FaArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-1" />
         </Link>
       </div>

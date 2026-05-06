@@ -15,13 +15,92 @@
     "titles": ["后端架构师", "全栈开发者", "AI工程师", "软件工程师"],
     "contact": "联系我",
     "getResume": "下载简历",
-    "stat1Label": "影响用户数",
-    "stat2Label": "可用性",
-    "stat3Label": "技术栈"
+    "stat1Label": "生产年数",
+    "stat2Label": "微服务数",
+    "stat3Label": "技术栈",
+    "globalReach": "全球覆盖",
+    "countries": "40+个国家",
+    "enterprise": "企业客户"
   },
-  "about": { "label": "关于我", "coreSkills": "核心技能", "availability": "开放机会" },
-  "projects": { "label": "项目", "viewCode": "查看代码", "liveDemo": "在线演示", "filterAll": "全部" },
-  "contact": { "label": "联系", "send": "发送消息", "name": "您的姓名", "email": "您的邮箱", "message": "您的留言" },
-  "theme": { "light": "浅色模式", "dark": "深色模式" },
-  "language": { "select": "选择语言" }
+  "about": {
+    "label": "关于我",
+    "designation": "软件工程师 — 全栈与AI",
+    "coreSkills": "核心技能",
+    "availability": "开放机会"
+  },
+  "experience": {
+    "label": "经历",
+    "workHistory": "工作经历",
+    "present": "至今",
+    "promoted": "↑ 晋升",
+    "senior": "高级",
+    "mid": "中级",
+    "intern": "实习"
+  },
+  "skills": {
+    "label": "技能",
+    "heading": "技能与技术",
+    "tagline": "持续学习 · 持续交付"
+  },
+  "projects": {
+    "label": "项目",
+    "viewCode": "查看代码",
+    "liveDemo": "在线演示",
+    "filterAll": "全部",
+    "viewSource": "查看源码",
+    "builtLabel": "构建项目",
+    "domainsLabel": "领域",
+    "techLabel": "技术",
+    "viewAll": "查看所有项目",
+    "ctaExplore": "探索完整作品集 →",
+    "ctaDesc": "包括AI/ML引擎、3D体验、开发工具和开源贡献。"
+  },
+  "education": {
+    "label": "教育"
+  },
+  "certifications": {
+    "label": "证书",
+    "badge": "✦ 认证资质 ✦",
+    "subtitle": "涵盖云AI、数据库、Web开发和编程的专业认证。",
+    "statsLabel2": "类别",
+    "statsLabel3": "颁发机构",
+    "viewAll": "查看所有证书"
+  },
+  "blogs": {
+    "label": "博客",
+    "readMore": "阅读更多",
+    "latest": "最新",
+    "viewAll": "查看所有文章"
+  },
+  "contact": {
+    "label": "联系",
+    "letsConnect": "联系我",
+    "subtitle": "欢迎全职职位、自由职业项目和AI/后端合作。",
+    "send": "发送消息",
+    "name": "您的姓名",
+    "email": "您的邮箱",
+    "message": "您的留言",
+    "emailLabel": "邮箱",
+    "phoneLabel": "电话",
+    "locationLabel": "位置",
+    "findMeOn": "在以下平台找我",
+    "available": "可用",
+    "responseTime": "24小时内",
+    "readyToCollaborate": "准备合作？",
+    "sendEmail": "发送邮件",
+    "sending": "发送中...",
+    "requiredError": "所有字段均为必填",
+    "emailError": "邮箱地址无效",
+    "success": "消息发送成功！"
+  },
+  "footer": {
+    "rights": "保留所有权利。"
+  },
+  "theme": {
+    "light": "浅色模式",
+    "dark": "深色模式"
+  },
+  "language": {
+    "select": "选择语言"
+  }
 }

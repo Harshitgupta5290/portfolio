@@ -5,8 +5,10 @@ import axios from "axios";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
+import { useLocale } from "@/app/context/locale-context";
 
 function ContactForm() {
+  const { t } = useLocale();
   const [error, setError] = useState({ email: false, required: false });
   const [isLoading, setIsLoading] = useState(false);
   const [focused, setFocused] = useState("");
@@ -31,7 +33,7 @@ function ContactForm() {
     try {
       setIsLoading(true);
       await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
-      toast.success("Message sent successfully!");
+      toast.success(t("contact.success"));
       setUserInput({ name: "", email: "", message: "" });
     } catch (err) {
       toast.error(err?.response?.data?.message);
@@ -62,7 +64,7 @@ function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-1.5">
               <label className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest font-mono">
-                Name
+                {t("contact.name")}
               </label>
               <input
                 className={fieldClass("name")}
@@ -78,7 +80,7 @@ function ContactForm() {
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest font-mono">
-                Email
+                {t("contact.emailLabel")}
               </label>
               <input
                 className={fieldClass("email")}
@@ -96,7 +98,7 @@ function ContactForm() {
                 onChange={(e) => setUserInput({ ...userInput, email: e.target.value })}
               />
               {error.email && (
-                <p className="text-[11px] text-red-400 font-mono">⚠ Invalid email address</p>
+                <p className="text-[11px] text-red-400 font-mono">⚠ {t("contact.emailError")}</p>
               )}
             </div>
           </div>
@@ -105,7 +107,7 @@ function ContactForm() {
           <div className="flex flex-col gap-1.5">
             <div className="flex items-center justify-between">
               <label className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest font-mono">
-                Message
+                {t("contact.message")}
               </label>
               <span className="text-[10px] text-[var(--ink-3)] font-mono">
                 {userInput.message.length}/500
@@ -127,7 +129,7 @@ function ContactForm() {
           {/* Error */}
           {error.required && (
             <p className="text-[11px] text-red-400 font-mono bg-red-400/5 border border-red-400/20 rounded-lg px-3 py-2">
-              ⚠ All fields are required
+              ⚠ {t("contact.requiredError")}
             </p>
           )}
 
@@ -139,11 +141,11 @@ function ContactForm() {
           >
             <div className="flex items-center justify-center gap-2.5 w-full bg-[var(--card)] group-hover:bg-[var(--surface-2)] rounded-[7px] px-6 py-3 transition-all duration-300">
               {isLoading ? (
-                <span className="text-sm font-mono text-[var(--ink-2)]">Sending...</span>
+                <span className="text-sm font-mono text-[var(--ink-2)]">{t("contact.sending")}</span>
               ) : (
                 <>
                   <span className="text-sm font-semibold text-[var(--ink)] uppercase tracking-wider">
-                    Send Message
+                    {t("contact.send")}
                   </span>
                   <TbMailForward
                     size={17}

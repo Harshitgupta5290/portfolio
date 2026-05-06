@@ -4,15 +4,19 @@
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useLocale } from "@/app/context/locale-context";
 
-const LEVEL_BADGE = {
-  senior: { label: "Senior",  cls: "text-[#16f2b3] border-[#16f2b3]/30 bg-[#16f2b3]/8" },
-  mid:    { label: "Mid-Level", cls: "text-violet-400 border-violet-400/30 bg-violet-400/8" },
-  intern: { label: "Intern",   cls: "text-[var(--ink-2)] border-[var(--line)] bg-[var(--surface-2)]"  },
+const LEVEL_BADGE_CLS = {
+  senior: "text-[#16f2b3] border-[#16f2b3]/30 bg-[#16f2b3]/8",
+  mid:    "text-violet-400 border-violet-400/30 bg-violet-400/8",
+  intern: "text-[var(--ink-2)] border-[var(--line)] bg-[var(--surface-2)]",
 };
 
-function TimelineCard({ exp, side, visible }) {
-  const badge = LEVEL_BADGE[exp.level] || LEVEL_BADGE.mid;
+function TimelineCard({ exp, side, visible, t }) {
+  const badgeCls = LEVEL_BADGE_CLS[exp.level] || LEVEL_BADGE_CLS.mid;
+  const badgeLabel = exp.level === "senior" ? t("experience.senior")
+    : exp.level === "intern" ? t("experience.intern")
+    : t("experience.mid");
 
   return (
     <div
@@ -39,11 +43,11 @@ function TimelineCard({ exp, side, visible }) {
           <div className="flex items-center gap-2 flex-wrap">
             {exp.promoted && (
               <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full border border-[#e8c547]/30 bg-[#e8c547]/10 text-[#e8c547]">
-                ↑ Promoted
+                {t("experience.promoted")}
               </span>
             )}
-            <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${badge.cls}`}>
-              {badge.label}
+            <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${badgeCls}`}>
+              {badgeLabel}
             </span>
           </div>
           <time className="text-[11px] font-mono text-[#16f2b3]/80 shrink-0">{exp.duration}</time>
@@ -72,6 +76,7 @@ function TimelineCard({ exp, side, visible }) {
 }
 
 function Experience() {
+  const { t } = useLocale();
   const itemRefs  = useRef([]);
   const [visible, setVisible] = useState({});
 
@@ -101,11 +106,11 @@ function Experience() {
       <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
         <div className="flex items-center gap-3">
           <span aria-hidden="true" className="w-8 h-[1px] bg-[#16f2b3]" />
-          <h2 className="text-[#16f2b3] text-xs uppercase tracking-[0.25em] font-semibold">Work History</h2>
+          <h2 className="text-[#16f2b3] text-xs uppercase tracking-[0.25em] font-semibold">{t("experience.workHistory")}</h2>
           <span aria-hidden="true" className="w-8 h-[1px] bg-[#16f2b3]" />
         </div>
         <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-[var(--ink)] tracking-tight">
-          Experience
+          {t("experience.label")}
         </p>
         <div aria-hidden="true" className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
       </div>
@@ -136,7 +141,7 @@ function Experience() {
                   <span className="w-2 h-2 rounded-full bg-[#16f2b3]" />
                 </div>
 
-                <TimelineCard exp={exp} side={side} visible={!!visible[i]} />
+                <TimelineCard exp={exp} side={side} visible={!!visible[i]} t={t} />
               </div>
             );
           })}

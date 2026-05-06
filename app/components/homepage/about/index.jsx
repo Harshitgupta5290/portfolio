@@ -5,6 +5,7 @@ import { personalData } from "@/utils/data/personal-data";
 import { certCount, techStackCount, aiProjectCount, MICROSERVICES_COUNT, API_LATENCY_REDUCTION } from "@/utils/data/computed-stats";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useLocale } from "@/app/context/locale-context";
 
 const aboutStats = [
   { value: certCount,              suffix: "",  label: "Certifications",   sub: "Oracle & Cloud" },
@@ -60,6 +61,7 @@ function CountUp({ target, suffix = "" }) {
 }
 
 function AboutSection() {
+  const { t } = useLocale();
   const imgRef = useRef(null);
   const [imgTilt, setImgTilt] = useState({});
 
@@ -87,7 +89,7 @@ function AboutSection() {
 
       {/* Vertical label */}
       <div aria-hidden="true" className="hidden lg:flex flex-col items-center absolute top-16 -left-8 z-10">
-        <span className="section-heading rotate-90 p-2 px-5">ABOUT ME</span>
+        <span className="section-heading rotate-90 p-2 px-5">{t("about.label").toUpperCase()}</span>
         <span className="h-36 w-[2px] bg-gradient-to-b from-violet-500/50 to-transparent mt-2" />
       </div>
 
@@ -100,13 +102,13 @@ function AboutSection() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="w-8 h-[1px] bg-[#16f2b3]" />
             <h2 className="text-[#16f2b3] text-xs uppercase tracking-[0.25em] font-semibold">
-              About — {personalData.name}
+              {t("about.label")} — {personalData.name}
             </h2>
           </div>
 
           {/* Designation — prominent for ATS keyword matching */}
           <p className="text-[var(--ink-3)] text-xs tracking-wide -mt-3">
-            {personalData.designation} · New Delhi, India
+            {t("about.designation")} · New Delhi, India
           </p>
 
           {/* Pull quote */}
@@ -125,7 +127,7 @@ function AboutSection() {
 
           {/* Core Skills — ATS keyword block, visually minimal */}
           <div>
-            <p className="text-[var(--ink-3)] text-[10px] uppercase tracking-widest mb-2 font-medium">Core Skills</p>
+            <p className="text-[var(--ink-3)] text-[10px] uppercase tracking-widest mb-2 font-medium">{t("about.coreSkills")}</p>
             <ul aria-label="Core skills" className="flex flex-wrap gap-1.5 list-none p-0 m-0">
               {CORE_SKILLS.map((skill) => (
                 <li key={skill} className="text-[11px] text-[var(--ink-2)] border border-[var(--line)] bg-[var(--surface-2)] px-2.5 py-1 rounded-md hover:border-[#16f2b3]/40 hover:text-[#16f2b3] transition-colors duration-200">
@@ -139,7 +141,7 @@ function AboutSection() {
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-2 bg-[#16f2b3]/10 border border-[#16f2b3]/30 text-[#16f2b3] text-xs font-medium px-3 py-1.5 rounded-full">
               <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />
-              Open to opportunities
+              {t("about.availability")}
             </span>
           </div>
 

@@ -15,13 +15,92 @@
     "titles": ["Arquitecto Backend", "Desarrollador Full Stack", "Ingeniero de IA", "Ingeniero de Software"],
     "contact": "Contáctame",
     "getResume": "Descargar CV",
-    "stat1Label": "Usuarios Impactados",
-    "stat2Label": "Tiempo de Actividad",
-    "stat3Label": "Tecnologías"
+    "stat1Label": "Años en Producción",
+    "stat2Label": "Microservicios",
+    "stat3Label": "Tecnologías",
+    "globalReach": "Alcance Global",
+    "countries": "40+ países",
+    "enterprise": "clientes empresariales"
   },
-  "about": { "label": "Sobre mí", "coreSkills": "Habilidades Clave", "availability": "Abierto a oportunidades" },
-  "projects": { "label": "Proyectos", "viewCode": "Ver Código", "liveDemo": "Demo en Vivo", "filterAll": "Todos" },
-  "contact": { "label": "Contacto", "send": "Enviar Mensaje", "name": "Tu Nombre", "email": "Tu Email", "message": "Tu Mensaje" },
-  "theme": { "light": "Modo claro", "dark": "Modo oscuro" },
-  "language": { "select": "Seleccionar idioma" }
+  "about": {
+    "label": "Sobre mí",
+    "designation": "Ingeniero de Software — Full Stack & IA",
+    "coreSkills": "Habilidades Clave",
+    "availability": "Abierto a oportunidades"
+  },
+  "experience": {
+    "label": "Experiencia",
+    "workHistory": "Historial Laboral",
+    "present": "Presente",
+    "promoted": "↑ Promovido",
+    "senior": "Senior",
+    "mid": "Nivel Medio",
+    "intern": "Prácticas"
+  },
+  "skills": {
+    "label": "Habilidades",
+    "heading": "Habilidades y Tecnologías",
+    "tagline": "Siempre aprendiendo · Siempre entregando"
+  },
+  "projects": {
+    "label": "Proyectos",
+    "viewCode": "Ver Código",
+    "liveDemo": "Demo en Vivo",
+    "filterAll": "Todos",
+    "viewSource": "Ver Fuente",
+    "builtLabel": "Proyectos Construidos",
+    "domainsLabel": "Dominios",
+    "techLabel": "Tecnologías",
+    "viewAll": "Ver Todos los Proyectos",
+    "ctaExplore": "Explorar el portafolio completo →",
+    "ctaDesc": "Incluyendo motores AI/ML, experiencias 3D, herramientas de desarrollo y contribuciones open-source."
+  },
+  "education": {
+    "label": "Educación"
+  },
+  "certifications": {
+    "label": "Certificaciones",
+    "badge": "✦ Credenciales Verificadas ✦",
+    "subtitle": "Credenciales profesionales en Cloud AI, bases de datos, desarrollo web y programación.",
+    "statsLabel2": "Categorías",
+    "statsLabel3": "Emisores",
+    "viewAll": "Ver Todas las Certificaciones"
+  },
+  "blogs": {
+    "label": "Blog",
+    "readMore": "Leer más",
+    "latest": "Últimos",
+    "viewAll": "Ver Todas las Publicaciones"
+  },
+  "contact": {
+    "label": "Contacto",
+    "letsConnect": "Conectemos",
+    "subtitle": "Abierto a roles de tiempo completo, proyectos freelance y colaboraciones en IA/backend.",
+    "send": "Enviar Mensaje",
+    "name": "Tu Nombre",
+    "email": "Tu Email",
+    "message": "Tu Mensaje",
+    "emailLabel": "Correo",
+    "phoneLabel": "Teléfono",
+    "locationLabel": "Ubicación",
+    "findMeOn": "Encuéntrame en",
+    "available": "Disponible",
+    "responseTime": "en 24 horas",
+    "readyToCollaborate": "¿listo para colaborar?",
+    "sendEmail": "Enviar Email",
+    "sending": "Enviando...",
+    "requiredError": "Todos los campos son requeridos",
+    "emailError": "Correo electrónico inválido",
+    "success": "¡Mensaje enviado con éxito!"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  },
+  "language": {
+    "select": "Seleccionar idioma"
+  }
 }

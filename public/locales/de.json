@@ -15,13 +15,92 @@
     "titles": ["Backend-Architekt", "Full-Stack-Entwickler", "KI-Ingenieur", "Software-Ingenieur"],
     "contact": "Kontakt aufnehmen",
     "getResume": "Lebenslauf herunterladen",
-    "stat1Label": "Nutzer",
-    "stat2Label": "Verfügbarkeit",
-    "stat3Label": "Technologien"
+    "stat1Label": "Jahre Erfahrung",
+    "stat2Label": "Microservices",
+    "stat3Label": "Technologien",
+    "globalReach": "Globale Reichweite",
+    "countries": "40+ Länder",
+    "enterprise": "Unternehmenskunden"
   },
-  "about": { "label": "Über mich", "coreSkills": "Kernfähigkeiten", "availability": "Offen für Angebote" },
-  "projects": { "label": "Projekte", "viewCode": "Code ansehen", "liveDemo": "Live-Demo", "filterAll": "Alle" },
-  "contact": { "label": "Kontakt", "send": "Nachricht senden", "name": "Ihr Name", "email": "Ihre E-Mail", "message": "Ihre Nachricht" },
-  "theme": { "light": "Hellmodus", "dark": "Dunkelmodus" },
-  "language": { "select": "Sprache auswählen" }
+  "about": {
+    "label": "Über mich",
+    "designation": "Software-Ingenieur — Full Stack & KI",
+    "coreSkills": "Kernfähigkeiten",
+    "availability": "Offen für Angebote"
+  },
+  "experience": {
+    "label": "Erfahrung",
+    "workHistory": "Berufserfahrung",
+    "present": "Heute",
+    "promoted": "↑ Befördert",
+    "senior": "Senior",
+    "mid": "Mittelstufe",
+    "intern": "Praktikant"
+  },
+  "skills": {
+    "label": "Fähigkeiten",
+    "heading": "Fähigkeiten und Technologien",
+    "tagline": "Immer lernend · Immer liefernd"
+  },
+  "projects": {
+    "label": "Projekte",
+    "viewCode": "Code ansehen",
+    "liveDemo": "Live-Demo",
+    "filterAll": "Alle",
+    "viewSource": "Quellcode ansehen",
+    "builtLabel": "Projekte erstellt",
+    "domainsLabel": "Bereiche",
+    "techLabel": "Technologien",
+    "viewAll": "Alle Projekte ansehen",
+    "ctaExplore": "Vollständiges Portfolio erkunden →",
+    "ctaDesc": "Einschließlich KI/ML-Engines, 3D-Erlebnisse, Entwicklungstools und Open-Source-Beiträge."
+  },
+  "education": {
+    "label": "Ausbildung"
+  },
+  "certifications": {
+    "label": "Zertifikate",
+    "badge": "✦ Verifizierte Zertifikate ✦",
+    "subtitle": "Berufliche Qualifikationen in Cloud AI, Datenbanken, Webentwicklung und Programmierung.",
+    "statsLabel2": "Kategorien",
+    "statsLabel3": "Aussteller",
+    "viewAll": "Alle Zertifikate ansehen"
+  },
+  "blogs": {
+    "label": "Blog",
+    "readMore": "Weiterlesen",
+    "latest": "Neueste",
+    "viewAll": "Alle Beiträge ansehen"
+  },
+  "contact": {
+    "label": "Kontakt",
+    "letsConnect": "Verbinden wir uns",
+    "subtitle": "Offen für Vollzeitstellen, Freelance-Projekte und KI/Backend-Kollaborationen.",
+    "send": "Nachricht senden",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "message": "Ihre Nachricht",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "locationLabel": "Standort",
+    "findMeOn": "Finden Sie mich auf",
+    "available": "Verfügbar",
+    "responseTime": "innerhalb 24 Stunden",
+    "readyToCollaborate": "bereit zur zusammenarbeit?",
+    "sendEmail": "E-Mail senden",
+    "sending": "Wird gesendet...",
+    "requiredError": "Alle Felder sind erforderlich",
+    "emailError": "Ungültige E-Mail-Adresse",
+    "success": "Nachricht erfolgreich gesendet!"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "theme": {
+    "light": "Hellmodus",
+    "dark": "Dunkelmodus"
+  },
+  "language": {
+    "select": "Sprache auswählen"
+  }
 }

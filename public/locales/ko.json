@@ -15,13 +15,92 @@
     "titles": ["백엔드 아키텍트", "풀스택 개발자", "AI 엔지니어", "소프트웨어 엔지니어"],
     "contact": "연락하기",
     "getResume": "이력서 다운로드",
-    "stat1Label": "영향 사용자",
-    "stat2Label": "가동 시간",
-    "stat3Label": "기술 스택"
+    "stat1Label": "프로덕션 연수",
+    "stat2Label": "마이크로서비스",
+    "stat3Label": "기술 스택",
+    "globalReach": "글로벌 도달범위",
+    "countries": "40개국 이상",
+    "enterprise": "엔터프라이즈 고객"
   },
-  "about": { "label": "소개", "coreSkills": "핵심 기술", "availability": "기회에 열려 있음" },
-  "projects": { "label": "프로젝트", "viewCode": "코드 보기", "liveDemo": "라이브 데모", "filterAll": "전체" },
-  "contact": { "label": "연락처", "send": "메시지 보내기", "name": "이름", "email": "이메일", "message": "메시지" },
-  "theme": { "light": "라이트 모드", "dark": "다크 모드" },
-  "language": { "select": "언어 선택" }
+  "about": {
+    "label": "소개",
+    "designation": "소프트웨어 엔지니어 — 풀스택 & AI",
+    "coreSkills": "핵심 기술",
+    "availability": "기회에 열려 있음"
+  },
+  "experience": {
+    "label": "경력",
+    "workHistory": "경력 이력",
+    "present": "현재",
+    "promoted": "↑ 승진",
+    "senior": "시니어",
+    "mid": "중급",
+    "intern": "인턴"
+  },
+  "skills": {
+    "label": "기술",
+    "heading": "기술 및 기술 스택",
+    "tagline": "항상 배우며 · 항상 출시"
+  },
+  "projects": {
+    "label": "프로젝트",
+    "viewCode": "코드 보기",
+    "liveDemo": "라이브 데모",
+    "filterAll": "전체",
+    "viewSource": "소스 보기",
+    "builtLabel": "구축된 프로젝트",
+    "domainsLabel": "도메인",
+    "techLabel": "기술",
+    "viewAll": "모든 프로젝트 보기",
+    "ctaExplore": "전체 포트폴리오 탐색 →",
+    "ctaDesc": "AI/ML 엔진, 3D 경험, 개발 도구 및 오픈소스 기여 포함."
+  },
+  "education": {
+    "label": "학력"
+  },
+  "certifications": {
+    "label": "자격증",
+    "badge": "✦ 인증된 자격증 ✦",
+    "subtitle": "클라우드 AI, 데이터베이스, 웹 개발, 프로그래밍 분야의 전문 자격증.",
+    "statsLabel2": "카테고리",
+    "statsLabel3": "발급 기관",
+    "viewAll": "모든 자격증 보기"
+  },
+  "blogs": {
+    "label": "블로그",
+    "readMore": "더 읽기",
+    "latest": "최신",
+    "viewAll": "모든 게시물 보기"
+  },
+  "contact": {
+    "label": "연락처",
+    "letsConnect": "연결해요",
+    "subtitle": "풀타임, 프리랜서, AI/백엔드 협업 모두 환영합니다.",
+    "send": "메시지 보내기",
+    "name": "이름",
+    "email": "이메일",
+    "message": "메시지",
+    "emailLabel": "이메일",
+    "phoneLabel": "전화",
+    "locationLabel": "위치",
+    "findMeOn": "여기서 찾아보세요",
+    "available": "가능",
+    "responseTime": "24시간 이내",
+    "readyToCollaborate": "협업할 준비가 됐나요?",
+    "sendEmail": "이메일 보내기",
+    "sending": "전송 중...",
+    "requiredError": "모든 필드를 입력해주세요",
+    "emailError": "유효하지 않은 이메일 주소",
+    "success": "메시지가 성공적으로 전송되었습니다!"
+  },
+  "footer": {
+    "rights": "모든 권리 보유."
+  },
+  "theme": {
+    "light": "라이트 모드",
+    "dark": "다크 모드"
+  },
+  "language": {
+    "select": "언어 선택"
+  }
 }

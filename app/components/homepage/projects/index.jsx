@@ -8,6 +8,7 @@ import {
   FaLayerGroup, FaBrain, FaPaintBrush, FaTools, FaCode,
 } from "react-icons/fa";
 import { projectsData, projectCategoryMeta } from "@/utils/data/projects-data";
+import { useLocale } from "@/app/context/locale-context";
 
 const categoryIcons = {
   "Full Stack": FaLayerGroup,
@@ -19,6 +20,7 @@ const categoryIcons = {
 
 /* ─── Featured Card (large) ───────────────────────────────────────── */
 function FeaturedCard({ project, large }) {
+  const { t } = useLocale();
   const cardRef = useRef(null);
   const [glow, setGlow]   = useState({ x: 50, y: 50, visible: false });
   const [tilt, setTilt]   = useState({});
@@ -146,7 +148,7 @@ function FeaturedCard({ project, large }) {
               className="flex items-center gap-1.5 text-[10px] text-[var(--ink-2)] hover:text-[var(--ink)] transition-colors duration-200 group/link"
             >
               <BsGithub size={13} className="group-hover/link:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all" />
-              <span>View Source</span>
+              <span>{t("projects.viewSource")}</span>
             </Link>
           )}
           {project.demo && (
@@ -158,7 +160,7 @@ function FeaturedCard({ project, large }) {
               style={{ color: `${hex}99` }}
             >
               <FiExternalLink size={12} className="group-hover/demo:scale-110 transition-all" />
-              <span className="group-hover/demo:underline underline-offset-2">Live Demo</span>
+              <span className="group-hover/demo:underline underline-offset-2">{t("projects.liveDemo")}</span>
             </Link>
           )}
         </div>
@@ -180,6 +182,7 @@ const totalCategories  = [...new Set(projectsData.map((p) => p.category))].lengt
 const totalTech        = [...new Set(projectsData.flatMap((p) => p.tools))].length;
 
 const Projects = () => {
+  const { t } = useLocale();
   return (
     <div id="projects" className="relative z-50 my-12 lg:my-24">
 
@@ -189,7 +192,7 @@ const Projects = () => {
         <div className="flex items-center justify-start relative pb-3">
           <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-extrabold italic tracking-tighter">
             <span className="text-[var(--ink)]">My </span>
-            <span className="bg-gradient-to-r from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">Projects</span>
+            <span className="bg-gradient-to-r from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">{t("projects.label")}</span>
           </h2>
           <div className="ml-4 flex-1 h-px bg-gradient-to-r from-[#16f2b3]/30 to-transparent" />
         </div>
@@ -199,9 +202,9 @@ const Projects = () => {
         {/* ── Stats row ── */}
         <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10">
           {[
-            { value: `${totalProjects}+`, label: "Projects Built" },
-            { value: `${totalCategories}`,  label: "Domains" },
-            { value: `${totalTech}+`,       label: "Technologies" },
+            { value: `${totalProjects}+`, label: t("projects.builtLabel") },
+            { value: `${totalCategories}`,  label: t("projects.domainsLabel") },
+            { value: `${totalTech}+`,       label: t("projects.techLabel") },
           ].map(({ value, label }) => (
             <div key={label} className="flex items-baseline gap-2">
               <span className="text-2xl sm:text-3xl font-black bg-gradient-to-br from-[#16f2b3] to-violet-400 bg-clip-text text-transparent">
@@ -256,21 +259,21 @@ const Projects = () => {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl px-6 py-5 border border-[var(--line)] bg-[var(--surface)]">
           <div>
             <p className="text-[var(--ink)] font-semibold text-sm">
-              Explore the full portfolio →{" "}
+              {t("projects.ctaExplore")}{" "}
               <span className="text-[var(--ink-2)] font-normal">
                 {totalProjects - featuredProjects.length} more projects across{" "}
                 {totalCategories} domains
               </span>
             </p>
             <p className="text-[11px] text-[var(--ink-3)] mt-0.5">
-              Including AI/ML engines, 3D experiences, dev tools, and open-source contributions.
+              {t("projects.ctaDesc")}
             </p>
           </div>
           <Link
             href="/projects"
             className="group flex items-center gap-2 shrink-0 px-5 py-2.5 rounded-xl text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-gradient-to-r from-violet-600 to-[#16f2b3] text-white shadow-[0_4px_24px_-4px_rgba(139,92,246,0.5)] hover:shadow-[0_4px_32px_-4px_rgba(22,242,179,0.5)] hover:scale-105"
           >
-            View All {totalProjects} Projects
+            {t("projects.viewAll")} ({totalProjects})
             <FiArrowRight
               size={14}
               className="group-hover:translate-x-1 transition-transform duration-200"

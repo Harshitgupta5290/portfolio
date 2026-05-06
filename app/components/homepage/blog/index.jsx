@@ -1,10 +1,13 @@
+"use client";
 // @flow strict
 import { featuredBlogs } from '@/utils/data/blogs-data';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
+import { useLocale } from "@/app/context/locale-context";
 
 function Blog() {
+  const { t } = useLocale();
   return (
     <div id='blogs' className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
@@ -17,8 +20,8 @@ function Blog() {
 
       <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
         <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-black tracking-tight">
-          <span className="text-[var(--ink)]">Latest </span>
-          <span className="text-[#16f2b3]">Blogs</span>
+          <span className="text-[var(--ink)]">{t("blogs.latest")} </span>
+          <span className="text-[#16f2b3]">{t("blogs.label")}</span>
         </h2>
         <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />
       </div>
@@ -35,7 +38,7 @@ function Blog() {
           role="button"
           href="/blog"
         >
-          <span>View All Posts</span>
+          <span>{t("blogs.viewAll")}</span>
           <FaArrowRight size={16} />
         </Link>
       </div>

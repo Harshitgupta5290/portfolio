@@ -1,5 +1,7 @@
+"use client";
 // @flow strict
 import { educations } from "@/utils/data/educations";
+import { useLocale } from "@/app/context/locale-context";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/study.json';
@@ -7,6 +9,7 @@ import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
 function Education() {
+  const { t } = useLocale();
   return (
     <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       <Image
@@ -25,7 +28,7 @@ function Education() {
       <div className="flex flex-col items-center my-5 lg:py-8 gap-3">
         <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold tracking-tight">
           <span className="text-[#16f2b3] font-mono select-none">{'{ '}</span>
-          <span className="text-[var(--ink)]">Education</span>
+          <span className="text-[var(--ink)]">{t("education.label")}</span>
           <span className="text-[#16f2b3] font-mono select-none">{' }'}</span>
         </h2>
         <div className="w-12 h-[3px] bg-[#16f2b3] rounded-full" />

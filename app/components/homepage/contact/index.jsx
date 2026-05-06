@@ -1,5 +1,7 @@
+"use client";
 // @flow strict
 import { personalData } from '@/utils/data/personal-data';
+import { useLocale } from "@/app/context/locale-context";
 import Link from 'next/link';
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsInstagram } from "react-icons/bs";
@@ -8,6 +10,7 @@ import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 
 function ContactSection() {
+  const { t } = useLocale();
   return (
     <div id="contact" className="relative z-50 border-t my-12 lg:my-24 border-[var(--line)]">
       {/* Top gradient line */}
@@ -20,11 +23,10 @@ function ContactSection() {
       {/* Section header */}
       <div className="flex flex-col items-center mt-12 mb-14">
         <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-extrabold text-[var(--ink)] text-center leading-tight tracking-tight">
-          Let&apos;s Connect
+          {t("contact.letsConnect")}
         </h2>
         <p className="text-[var(--ink-2)] text-sm mt-3 max-w-md text-center leading-relaxed">
-          Open to full-time roles, freelance projects, and AI/backend collaborations.
-          I usually respond within 24 hours.
+          {t("contact.subtitle")}
         </p>
         <div className="w-20 h-[2px] bg-gradient-to-r from-violet-500 to-[#16f2b3] mt-5 rounded-full" />
       </div>
@@ -36,9 +38,9 @@ function ContactSection() {
         <div className="lg:col-span-2 flex flex-col gap-4">
 
           {[
-            { icon: MdAlternateEmail, label: "Email", value: personalData.email, href: `mailto:${personalData.email}`, color: "#16f2b3" },
-            { icon: IoMdCall, label: "Phone", value: personalData.phone, href: `tel:${personalData.phone}`, color: "#a78bfa" },
-            { icon: CiLocationOn, label: "Location", value: personalData.address, href: null, color: "#ec4899" },
+            { icon: MdAlternateEmail, label: t("contact.emailLabel"), value: personalData.email, href: `mailto:${personalData.email}`, color: "#16f2b3" },
+            { icon: IoMdCall, label: t("contact.phoneLabel"), value: personalData.phone, href: `tel:${personalData.phone}`, color: "#a78bfa" },
+            { icon: CiLocationOn, label: t("contact.locationLabel"), value: personalData.address, href: null, color: "#ec4899" },
           ].map(({ icon: Icon, label, value, href, color }) => (
             <div
               key={label}
@@ -65,7 +67,7 @@ function ContactSection() {
 
           {/* Social links */}
           <div className="mt-2">
-            <p className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest mb-3">Find me on</p>
+            <p className="text-[10px] text-[var(--ink-3)] uppercase tracking-widest mb-3">{t("contact.findMeOn")}</p>
             <div className="flex items-center gap-3 flex-wrap">
               {[
                 { href: personalData.github,    Icon: IoLogoGithub,   label: "GitHub"    },
@@ -116,10 +118,10 @@ function ContactSection() {
             </div>
             <div className="pl-2 space-y-1.5">
               <p className="text-[var(--ink-2)]">
-                {'>'} Status: <span className="text-green-400 font-semibold">Available</span> for new opportunities
+                {'>'} Status: <span className="text-green-400 font-semibold">{t("contact.available")}</span> for new opportunities
               </p>
               <p className="text-[var(--ink-2)]">
-                {'>'} Response time: <span className="text-[#16f2b3]">within 24 hours</span>
+                {'>'} Response time: <span className="text-[#16f2b3]">{t("contact.responseTime")}</span>
               </p>
               <p className="text-[var(--ink-2)]">
                 {'>'} Timezone: <span className="text-violet-400">IST (UTC+5:30)</span>
@@ -153,13 +155,13 @@ function ContactSection() {
 
           {/* CTA strip */}
           <div className="border-t border-[var(--line)] px-6 py-4 flex items-center justify-between">
-            <span className="text-[var(--ink-3)] text-[10px] font-mono">ready to collaborate?</span>
+            <span className="text-[var(--ink-3)] text-[10px] font-mono">{t("contact.readyToCollaborate")}</span>
             <a
               href={`mailto:${personalData.email}`}
               className="flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-[#16f2b3]/80 text-white text-xs font-semibold uppercase tracking-wider hover:shadow-[0_0_20px_rgba(22,242,179,0.2)] transition-all duration-300"
             >
               <MdAlternateEmail size={14} />
-              Send Email
+              {t("contact.sendEmail")}
             </a>
           </div>
         </div>

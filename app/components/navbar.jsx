@@ -35,7 +35,7 @@ function Navbar() {
   const isHome     = pathname === "/";
   const langRef    = useRef(null);
 
-  const { locale, setLocale }              = useLocale();
+  const { locale, setLocale, t }           = useLocale();
 
   // Close language dropdown when clicking outside
   useEffect(() => {
@@ -108,7 +108,7 @@ function Navbar() {
                 <li key={section}>
                   <Link href={href} className="relative block px-3 py-2 no-underline outline-none hover:no-underline group">
                     <div className={`text-[11px] font-semibold tracking-widest uppercase transition-colors duration-300 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>
-                      {label}
+                      {t(`nav.${section}`)}
                     </div>
                     <span className={`absolute bottom-0 left-3 right-3 h-[1px] origin-left transition-all duration-300 ${active ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3] scale-x-100" : "bg-pink-500 scale-x-0 group-hover:scale-x-100"}`} />
                   </Link>
@@ -124,7 +124,7 @@ function Navbar() {
                   className="relative block px-3 py-2 no-underline outline-none hover:no-underline group cursor-pointer"
                 >
                   <div className={`text-[11px] font-semibold tracking-widest uppercase transition-colors duration-300 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>
-                    {label}
+                    {t(`nav.${section}`)}
                   </div>
                   <span className={`absolute bottom-0 left-3 right-3 h-[1px] origin-left transition-all duration-300 ${active ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3] scale-x-100" : "bg-pink-500 scale-x-0 group-hover:scale-x-100"}`} />
                 </a>
@@ -172,7 +172,7 @@ function Navbar() {
             target="_blank"
             className="flex items-center gap-1.5 ml-1 px-4 py-1.5 rounded-md border border-[#16f2b3]/40 text-[#16f2b3] text-[11px] font-semibold tracking-widest uppercase hover:bg-[#16f2b3]/10 hover:border-[#16f2b3] transition-all duration-300"
           >
-            Resume
+            {t("nav.resume")}
           </Link>
         </div>
 
@@ -206,7 +206,7 @@ function Navbar() {
                   <li key={section} className="w-full">
                     <Link href={href} onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 px-6 py-3 no-underline outline-none group">
                       <span className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${active ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3]" : "bg-gray-700 group-hover:bg-pink-500"}`} />
-                      <div className={`text-xs font-semibold tracking-widest uppercase transition-colors duration-200 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>{label}</div>
+                      <div className={`text-xs font-semibold tracking-widest uppercase transition-colors duration-200 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>{t(`nav.${section}`)}</div>
                     </Link>
                   </li>
                 );
@@ -216,7 +216,7 @@ function Navbar() {
                 <li key={section} className="w-full">
                   <a href={`#${section}`} onClick={(e) => handleSectionClick(e, section)} className="flex items-center gap-3 px-6 py-3 no-underline outline-none group cursor-pointer">
                     <span className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${active ? "bg-[#16f2b3] shadow-[0_0_6px_#16f2b3]" : "bg-gray-700 group-hover:bg-pink-500"}`} />
-                    <div className={`text-xs font-semibold tracking-widest uppercase transition-colors duration-200 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>{label}</div>
+                    <div className={`text-xs font-semibold tracking-widest uppercase transition-colors duration-200 ${active ? "text-[#16f2b3]" : "text-gray-400 group-hover:text-white"}`}>{t(`nav.${section}`)}</div>
                   </a>
                 </li>
               );
@@ -241,7 +241,7 @@ function Navbar() {
             <li className="w-full px-6 py-3 md:hidden">
               <Link href="/Harshit_Gupta_Resume.pdf" download="Harshit_Gupta_Resume.pdf" target="_blank" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 w-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] shadow-[0_0_6px_#16f2b3]" />
-                <div className="text-xs font-semibold tracking-widest uppercase text-[#16f2b3]">Resume</div>
+                <div className="text-xs font-semibold tracking-widest uppercase text-[#16f2b3]">{t("nav.resume")}</div>
               </Link>
             </li>
           </ul>

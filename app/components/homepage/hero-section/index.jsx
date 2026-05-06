@@ -10,24 +10,29 @@ import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import WireframeGlobe from "@/app/components/helper/wireframe-globe";
+import { useLocale } from "@/app/context/locale-context";
 
-const TITLES = ["Full Stack Developer", "AI Engineer", "Software Engineer", "Backend Architect"];
+const DEFAULT_TITLES = ["Backend Architect", "Full Stack Developer", "AI Engineer", "Software Engineer"];
 
 function HeroSection() {
+  const { t, tArr, locale } = useLocale();
+  const titles = tArr("hero.titles", DEFAULT_TITLES);
+
   const cardRef     = useRef(null);
   const [tiltStyle, setTiltStyle]   = useState({});
   const [isHovering, setIsHovering] = useState(false);
   const [typedTitle, setTypedTitle] = useState("");
 
-  // Cycling typing animation
+  // Cycling typing animation — restarts when locale changes (titles derived from locale)
   useEffect(() => {
+    const currentTitles = tArr("hero.titles", DEFAULT_TITLES);
     let titleIndex = 0;
     let charIndex  = 0;
     let deleting   = false;
     let timeout;
 
     const tick = () => {
-      const current = TITLES[titleIndex];
+      const current = currentTitles[titleIndex];
       if (!deleting) {
         charIndex++;
         setTypedTitle(current.slice(0, charIndex));
@@ -41,7 +46,7 @@ function HeroSection() {
         setTypedTitle(current.slice(0, charIndex));
         if (charIndex === 0) {
           deleting = false;
-          titleIndex = (titleIndex + 1) % TITLES.length;
+          titleIndex = (titleIndex + 1) % currentTitles.length;
           timeout  = setTimeout(tick, 400);
           return;
         }
@@ -51,7 +56,7 @@ function HeroSection() {
 
     timeout = setTimeout(tick, 400);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [locale]);
 
   const handleMouseMove = useCallback((e) => {
     const card = cardRef.current;
@@ -98,7 +103,7 @@ function HeroSection() {
           {/* Availability pill */}
           <div className="mb-5 flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#16f2b320] bg-[#16f2b308]">
             <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />
-            <span className="text-[#16f2b3] text-xs font-mono tracking-wider">Available for hire</span>
+            <span className="text-[#16f2b3] text-xs font-mono tracking-wider">{t("hero.available")}</span>
           </div>
 
           {/* Editorial H1 */}
@@ -118,7 +123,7 @@ function HeroSection() {
             </span>
           </h1>
 
-          {/* Social links — GitHub + LinkedIn only */}
+          {/* Social links */}
           <div className="my-8 flex items-center gap-3">
             {[
               { href: personalData.github,    Icon: BsGithub,    label: "GitHub"    },
@@ -147,7 +152,7 @@ function HeroSection() {
               className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)]"
             >
               <button className="px-6 py-3 md:px-8 md:py-4 bg-[var(--card)] rounded-full text-xs md:text-sm font-semibold uppercase tracking-wider text-[var(--ink)] flex items-center gap-2 hover:gap-3 transition-all duration-200">
-                <span>Contact me</span>
+                <span>{t("hero.contact")}</span>
                 <RiContactsFill size={15} />
               </button>
             </Link>
@@ -159,17 +164,17 @@ function HeroSection() {
               href={personalData.resume}
               download="Harshit_Gupta_Resume.pdf"
             >
-              <span>Get Resume</span>
+              <span>{t("hero.getResume")}</span>
               <MdDownload size={15} />
             </Link>
           </div>
 
-          {/* Stats row — real data from skillsData */}
+          {/* Stats row */}
           <div className="mt-12 flex items-center gap-8 flex-wrap" role="list" aria-label="Key stats">
             {[
-              { value: `${yearsExperience}+`,     label: "Years Production" },
-              { value: `${MICROSERVICES_COUNT}+`, label: "Microservices Built" },
-              { value: `${techStackCount}+`,      label: "Technologies" },
+              { value: `${yearsExperience}+`,     label: t("hero.stat1Label") },
+              { value: `${MICROSERVICES_COUNT}+`, label: t("hero.stat2Label") },
+              { value: `${techStackCount}+`,      label: t("hero.stat3Label") },
             ].map(({ value, label }) => (
               <div key={label} role="listitem" className="flex flex-col">
                 <span className="text-2xl font-extrabold text-[#16f2b3]">{value}</span>
@@ -185,7 +190,7 @@ function HeroSection() {
             {/* Header label */}
             <div className="flex items-center gap-2 self-start">
               <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />
-              <span className="text-[10px] font-mono text-[#16f2b3]/70 tracking-wider uppercase">Global Reach</span>
+              <span className="text-[10px] font-mono text-[#16f2b3]/70 tracking-wider uppercase">{t("hero.globalReach")}</span>
             </div>
 
             {/* Globe canvas wrapper */}
@@ -197,7 +202,6 @@ function HeroSection() {
               style={tiltStyle}
               className={`relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[560px] aspect-square ${isHovering ? "" : "hero-code-float"}`}
             >
-              {/* Ambient glow behind globe */}
               <div aria-hidden="true" className="absolute inset-0 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(22,242,179,0.06)_0%,transparent_70%)] pointer-events-none" />
               <WireframeGlobe />
             </div>
@@ -206,11 +210,11 @@ function HeroSection() {
             <div className="flex items-center gap-5 self-start mt-1">
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-[#e8c547]" />
-                <span className="text-[10px] font-mono text-[var(--ink-3)]">40+ countries</span>
+                <span className="text-[10px] font-mono text-[var(--ink-3)]">{t("hero.countries")}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-[#16f2b3]" />
-                <span className="text-[10px] font-mono text-[var(--ink-3)]">enterprise clients</span>
+                <span className="text-[10px] font-mono text-[var(--ink-3)]">{t("hero.enterprise")}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#16f2b3] animate-pulse" />

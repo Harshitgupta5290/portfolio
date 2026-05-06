@@ -15,9 +15,12 @@
     "titles": ["बैकएंड आर्किटेक्ट", "फुल स्टैक डेवलपर", "AI इंजीनियर", "सॉफ्टवेयर इंजीनियर"],
     "contact": "संपर्क करें",
     "getResume": "रेज़्यूमे डाउनलोड करें",
-    "stat1Label": "उपयोगकर्ता",
-    "stat2Label": "अपटाइम",
-    "stat3Label": "टेक्नोलॉजी"
+    "stat1Label": "वर्षों का अनुभव",
+    "stat2Label": "माइक्रोसर्विसेज़",
+    "stat3Label": "तकनीकें",
+    "globalReach": "वैश्विक पहुँच",
+    "countries": "40+ देश",
+    "enterprise": "एंटरप्राइज़ क्लाइंट"
   },
   "about": {
     "label": "परिचय",
@@ -25,8 +28,79 @@
     "coreSkills": "मुख्य कौशल",
     "availability": "अवसरों के लिए उपलब्ध"
   },
-  "projects": { "label": "प्रोजेक्ट्स", "viewCode": "कोड देखें", "liveDemo": "लाइव डेमो", "filterAll": "सभी" },
-  "contact": { "label": "संपर्क", "send": "संदेश भेजें", "name": "आपका नाम", "email": "आपका ईमेल", "message": "आपका संदेश" },
-  "theme": { "light": "लाइट मोड", "dark": "डार्क मोड" },
-  "language": { "select": "भाषा चुनें" }
+  "experience": {
+    "label": "अनुभव",
+    "workHistory": "कार्य इतिहास",
+    "present": "वर्तमान",
+    "promoted": "↑ पदोन्नत",
+    "senior": "वरिष्ठ",
+    "mid": "मध्य स्तर",
+    "intern": "इंटर्न"
+  },
+  "skills": {
+    "label": "कौशल",
+    "heading": "कौशल और तकनीक",
+    "tagline": "सदा सीखते रहो · सदा बनाते रहो"
+  },
+  "projects": {
+    "label": "प्रोजेक्ट्स",
+    "viewCode": "कोड देखें",
+    "liveDemo": "लाइव डेमो",
+    "filterAll": "सभी",
+    "viewSource": "सोर्स देखें",
+    "builtLabel": "निर्मित प्रोजेक्ट्स",
+    "domainsLabel": "क्षेत्र",
+    "techLabel": "तकनीकें",
+    "viewAll": "सभी प्रोजेक्ट्स देखें",
+    "ctaExplore": "पूरा पोर्टफोलियो देखें →",
+    "ctaDesc": "AI/ML इंजन, 3D अनुभव, डेव टूल्स और ओपन-सोर्स योगदान सहित।"
+  },
+  "education": {
+    "label": "शिक्षा"
+  },
+  "certifications": {
+    "label": "प्रमाणपत्र",
+    "badge": "✦ सत्यापित प्रमाण-पत्र ✦",
+    "subtitle": "क्लाउड AI, डेटाबेस, वेब डेवलपमेंट और प्रोग्रामिंग में व्यावसायिक प्रमाण-पत्र।",
+    "statsLabel2": "श्रेणियाँ",
+    "statsLabel3": "जारीकर्ता",
+    "viewAll": "सभी प्रमाणपत्र देखें"
+  },
+  "blogs": {
+    "label": "ब्लॉग",
+    "readMore": "और पढ़ें",
+    "latest": "नवीनतम",
+    "viewAll": "सभी पोस्ट देखें"
+  },
+  "contact": {
+    "label": "संपर्क",
+    "letsConnect": "जुड़ें हमसे",
+    "subtitle": "पूर्णकालिक भूमिकाओं, फ्रीलांस प्रोजेक्ट्स और AI/बैकएंड सहयोग के लिए उपलब्ध।",
+    "send": "संदेश भेजें",
+    "name": "आपका नाम",
+    "email": "आपका ईमेल",
+    "message": "आपका संदेश",
+    "emailLabel": "ईमेल",
+    "phoneLabel": "फ़ोन",
+    "locationLabel": "स्थान",
+    "findMeOn": "मुझे यहाँ खोजें",
+    "available": "उपलब्ध",
+    "responseTime": "24 घंटे में",
+    "readyToCollaborate": "सहयोग के लिए तैयार?",
+    "sendEmail": "ईमेल भेजें",
+    "sending": "भेज रहे हैं...",
+    "requiredError": "सभी फ़ील्ड आवश्यक हैं",
+    "emailError": "अमान्य ईमेल पता",
+    "success": "संदेश सफलतापूर्वक भेजा गया!"
+  },
+  "footer": {
+    "rights": "सर्वाधिकार सुरक्षित।"
+  },
+  "theme": {
+    "light": "लाइट मोड",
+    "dark": "डार्क मोड"
+  },
+  "language": {
+    "select": "भाषा चुनें"
+  }
 }

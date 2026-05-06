@@ -15,13 +15,92 @@
     "titles": ["Backend-архитектор", "Full Stack разработчик", "ИИ-инженер", "Программный инженер"],
     "contact": "Связаться",
     "getResume": "Скачать резюме",
-    "stat1Label": "Пользователей",
-    "stat2Label": "Доступность",
-    "stat3Label": "Технологий"
+    "stat1Label": "Лет в продакшне",
+    "stat2Label": "Микросервисов",
+    "stat3Label": "Технологий",
+    "globalReach": "Глобальный охват",
+    "countries": "40+ стран",
+    "enterprise": "корпоративные клиенты"
   },
-  "about": { "label": "О себе", "coreSkills": "Ключевые навыки", "availability": "Открыт к возможностям" },
-  "projects": { "label": "Проекты", "viewCode": "Смотреть код", "liveDemo": "Демо", "filterAll": "Все" },
-  "contact": { "label": "Контакты", "send": "Отправить", "name": "Ваше имя", "email": "Ваш email", "message": "Ваше сообщение" },
-  "theme": { "light": "Светлая тема", "dark": "Тёмная тема" },
-  "language": { "select": "Выбрать язык" }
+  "about": {
+    "label": "О себе",
+    "designation": "Программный инженер — Full Stack & AI",
+    "coreSkills": "Ключевые навыки",
+    "availability": "Открыт к возможностям"
+  },
+  "experience": {
+    "label": "Опыт",
+    "workHistory": "Опыт работы",
+    "present": "н.в.",
+    "promoted": "↑ Повышение",
+    "senior": "Старший",
+    "mid": "Средний уровень",
+    "intern": "Стажёр"
+  },
+  "skills": {
+    "label": "Навыки",
+    "heading": "Навыки и технологии",
+    "tagline": "Всегда учусь · Всегда выпускаю"
+  },
+  "projects": {
+    "label": "Проекты",
+    "viewCode": "Смотреть код",
+    "liveDemo": "Демо",
+    "filterAll": "Все",
+    "viewSource": "Посмотреть код",
+    "builtLabel": "Создано проектов",
+    "domainsLabel": "Области",
+    "techLabel": "Технологий",
+    "viewAll": "Смотреть все проекты",
+    "ctaExplore": "Изучить полное портфолио →",
+    "ctaDesc": "Включая AI/ML движки, 3D опыт, инструменты разработки и вклад в open-source."
+  },
+  "education": {
+    "label": "Образование"
+  },
+  "certifications": {
+    "label": "Сертификаты",
+    "badge": "✦ Проверенные сертификаты ✦",
+    "subtitle": "Профессиональные сертификаты в области Cloud AI, баз данных, веб-разработки и программирования.",
+    "statsLabel2": "Категории",
+    "statsLabel3": "Издатели",
+    "viewAll": "Смотреть все сертификаты"
+  },
+  "blogs": {
+    "label": "Блог",
+    "readMore": "Читать далее",
+    "latest": "Последние",
+    "viewAll": "Смотреть все посты"
+  },
+  "contact": {
+    "label": "Контакты",
+    "letsConnect": "Давайте свяжемся",
+    "subtitle": "Открыт к полной занятости, фриланс-проектам и сотрудничеству по AI/backend.",
+    "send": "Отправить",
+    "name": "Ваше имя",
+    "email": "Ваш email",
+    "message": "Ваше сообщение",
+    "emailLabel": "Email",
+    "phoneLabel": "Телефон",
+    "locationLabel": "Местоположение",
+    "findMeOn": "Найти меня на",
+    "available": "Доступен",
+    "responseTime": "в течение 24 часов",
+    "readyToCollaborate": "готов к сотрудничеству?",
+    "sendEmail": "Отправить письмо",
+    "sending": "Отправка...",
+    "requiredError": "Все поля обязательны",
+    "emailError": "Неверный адрес электронной почты",
+    "success": "Сообщение успешно отправлено!"
+  },
+  "footer": {
+    "rights": "Все права защищены."
+  },
+  "theme": {
+    "light": "Светлая тема",
+    "dark": "Тёмная тема"
+  },
+  "language": {
+    "select": "Выбрать язык"
+  }
 }

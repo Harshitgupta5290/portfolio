@@ -15,13 +15,92 @@
     "titles": ["バックエンドアーキテクト", "フルスタック開発者", "AIエンジニア", "ソフトウェアエンジニア"],
     "contact": "お問い合わせ",
     "getResume": "履歴書をダウンロード",
-    "stat1Label": "影響ユーザー数",
-    "stat2Label": "稼働率",
-    "stat3Label": "技術スタック"
+    "stat1Label": "本番運用年数",
+    "stat2Label": "マイクロサービス",
+    "stat3Label": "技術スタック",
+    "globalReach": "グローバルリーチ",
+    "countries": "40か国以上",
+    "enterprise": "エンタープライズクライアント"
   },
-  "about": { "label": "自己紹介", "coreSkills": "コアスキル", "availability": "機会に開放的" },
-  "projects": { "label": "プロジェクト", "viewCode": "コードを見る", "liveDemo": "ライブデモ", "filterAll": "すべて" },
-  "contact": { "label": "お問い合わせ", "send": "送信", "name": "お名前", "email": "メールアドレス", "message": "メッセージ" },
-  "theme": { "light": "ライトモード", "dark": "ダークモード" },
-  "language": { "select": "言語を選択" }
+  "about": {
+    "label": "自己紹介",
+    "designation": "ソフトウェアエンジニア — フルスタック & AI",
+    "coreSkills": "コアスキル",
+    "availability": "機会に開放的"
+  },
+  "experience": {
+    "label": "経験",
+    "workHistory": "職歴",
+    "present": "現在",
+    "promoted": "↑ 昇進",
+    "senior": "シニア",
+    "mid": "ミドルレベル",
+    "intern": "インターン"
+  },
+  "skills": {
+    "label": "スキル",
+    "heading": "スキルと技術",
+    "tagline": "常に学ぶ · 常に出荷"
+  },
+  "projects": {
+    "label": "プロジェクト",
+    "viewCode": "コードを見る",
+    "liveDemo": "ライブデモ",
+    "filterAll": "すべて",
+    "viewSource": "ソースを見る",
+    "builtLabel": "構築プロジェクト",
+    "domainsLabel": "ドメイン",
+    "techLabel": "技術",
+    "viewAll": "すべてのプロジェクトを見る",
+    "ctaExplore": "フルポートフォリオを探索 →",
+    "ctaDesc": "AI/MLエンジン、3D体験、開発ツール、オープンソース貢献を含む。"
+  },
+  "education": {
+    "label": "学歴"
+  },
+  "certifications": {
+    "label": "資格",
+    "badge": "✦ 認証資格 ✦",
+    "subtitle": "クラウドAI、データベース、Web開発、プログラミングの専門資格。",
+    "statsLabel2": "カテゴリー",
+    "statsLabel3": "発行機関",
+    "viewAll": "すべての資格を見る"
+  },
+  "blogs": {
+    "label": "ブログ",
+    "readMore": "続きを読む",
+    "latest": "最新",
+    "viewAll": "すべての投稿を見る"
+  },
+  "contact": {
+    "label": "お問い合わせ",
+    "letsConnect": "つながりましょう",
+    "subtitle": "フルタイムの役割、フリーランスプロジェクト、AI/バックエンドコラボレーションを歓迎します。",
+    "send": "送信",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "メッセージ",
+    "emailLabel": "メール",
+    "phoneLabel": "電話",
+    "locationLabel": "場所",
+    "findMeOn": "こちらで見つけてください",
+    "available": "利用可能",
+    "responseTime": "24時間以内",
+    "readyToCollaborate": "コラボレーションの準備ができていますか?",
+    "sendEmail": "メールを送る",
+    "sending": "送信中...",
+    "requiredError": "すべてのフィールドが必須です",
+    "emailError": "無効なメールアドレス",
+    "success": "メッセージが正常に送信されました！"
+  },
+  "footer": {
+    "rights": "全著作権所有。"
+  },
+  "theme": {
+    "light": "ライトモード",
+    "dark": "ダークモード"
+  },
+  "language": {
+    "select": "言語を選択"
+  }
 }

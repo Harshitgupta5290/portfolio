@@ -15,13 +15,92 @@
     "titles": ["Architetto Backend", "Sviluppatore Full Stack", "Ingegnere AI", "Ingegnere Software"],
     "contact": "Contattami",
     "getResume": "Scarica CV",
-    "stat1Label": "Utenti Impattati",
-    "stat2Label": "Disponibilità",
-    "stat3Label": "Tecnologie"
+    "stat1Label": "Anni in Produzione",
+    "stat2Label": "Microservizi",
+    "stat3Label": "Tecnologie",
+    "globalReach": "Portata Globale",
+    "countries": "40+ paesi",
+    "enterprise": "clienti aziendali"
   },
-  "about": { "label": "Chi sono", "coreSkills": "Competenze Chiave", "availability": "Aperto a opportunità" },
-  "projects": { "label": "Progetti", "viewCode": "Vedi Codice", "liveDemo": "Demo Live", "filterAll": "Tutti" },
-  "contact": { "label": "Contatti", "send": "Invia Messaggio", "name": "Il tuo nome", "email": "La tua email", "message": "Il tuo messaggio" },
-  "theme": { "light": "Modalità chiara", "dark": "Modalità scura" },
-  "language": { "select": "Seleziona lingua" }
+  "about": {
+    "label": "Chi sono",
+    "designation": "Ingegnere Software — Full Stack & AI",
+    "coreSkills": "Competenze Chiave",
+    "availability": "Aperto a opportunità"
+  },
+  "experience": {
+    "label": "Esperienza",
+    "workHistory": "Storico Lavorativo",
+    "present": "Presente",
+    "promoted": "↑ Promosso",
+    "senior": "Senior",
+    "mid": "Livello Medio",
+    "intern": "Stagista"
+  },
+  "skills": {
+    "label": "Competenze",
+    "heading": "Competenze e Tecnologie",
+    "tagline": "Sempre in apprendimento · Sempre in produzione"
+  },
+  "projects": {
+    "label": "Progetti",
+    "viewCode": "Vedi Codice",
+    "liveDemo": "Demo Live",
+    "filterAll": "Tutti",
+    "viewSource": "Vedi Sorgente",
+    "builtLabel": "Progetti Realizzati",
+    "domainsLabel": "Domini",
+    "techLabel": "Tecnologie",
+    "viewAll": "Vedi Tutti i Progetti",
+    "ctaExplore": "Esplora il portfolio completo →",
+    "ctaDesc": "Inclusi motori AI/ML, esperienze 3D, strumenti di sviluppo e contributi open-source."
+  },
+  "education": {
+    "label": "Formazione"
+  },
+  "certifications": {
+    "label": "Certificazioni",
+    "badge": "✦ Credenziali Verificate ✦",
+    "subtitle": "Credenziali professionali in Cloud AI, database, sviluppo web e programmazione.",
+    "statsLabel2": "Categorie",
+    "statsLabel3": "Enti Emittenti",
+    "viewAll": "Vedi Tutte le Certificazioni"
+  },
+  "blogs": {
+    "label": "Blog",
+    "readMore": "Leggi di più",
+    "latest": "Ultimi",
+    "viewAll": "Vedi Tutti i Post"
+  },
+  "contact": {
+    "label": "Contatti",
+    "letsConnect": "Connettiamoci",
+    "subtitle": "Aperto a ruoli full-time, progetti freelance e collaborazioni AI/backend.",
+    "send": "Invia Messaggio",
+    "name": "Il tuo nome",
+    "email": "La tua email",
+    "message": "Il tuo messaggio",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefono",
+    "locationLabel": "Posizione",
+    "findMeOn": "Trovami su",
+    "available": "Disponibile",
+    "responseTime": "entro 24 ore",
+    "readyToCollaborate": "pronto a collaborare?",
+    "sendEmail": "Invia Email",
+    "sending": "Invio in corso...",
+    "requiredError": "Tutti i campi sono obbligatori",
+    "emailError": "Indirizzo email non valido",
+    "success": "Messaggio inviato con successo!"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati."
+  },
+  "theme": {
+    "light": "Modalità chiara",
+    "dark": "Modalità scura"
+  },
+  "language": {
+    "select": "Seleziona lingua"
+  }
 }

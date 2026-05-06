@@ -21,6 +21,7 @@ const LocaleContext = createContext({
   dir: "ltr",
   setLocale: () => {},
   t: (key) => key,
+  tArr: (_key, fallback = []) => fallback,
 });
 
 export function LocaleProvider({ children }) {
@@ -66,9 +67,20 @@ export function LocaleProvider({ children }) {
     return typeof node === "string" ? node : key;
   };
 
+  // Array accessor: tArr("hero.titles", fallback)
+  const tArr = (key, fallback = []) => {
+    const parts = key.split(".");
+    let node = messages;
+    for (const p of parts) {
+      if (node == null || typeof node !== "object") return fallback;
+      node = node[p];
+    }
+    return Array.isArray(node) ? node : fallback;
+  };
+
   return (
     <LocaleContext.Provider
-      value={{ locale, dir: RTL_LOCALES.includes(locale) ? "rtl" : "ltr", setLocale, t }}
+      value={{ locale, dir: RTL_LOCALES.includes(locale) ? "rtl" : "ltr", setLocale, t, tArr }}
     >
       {children}
     </LocaleContext.Provider>
